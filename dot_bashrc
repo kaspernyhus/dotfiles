@@ -19,6 +19,8 @@ alias gf='git fetch -p'
 
 alias cz=chezmoi
 
+alias py=python
+
 #PS1='[\u@\h \W]\$ '
 
 # git branch info if present
