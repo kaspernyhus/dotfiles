@@ -1,0 +1,35 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Fira Sans;
+    font-weight: bold;
+    font-size: 16px;
+    min-height: 0;
+}
+
+window#waybar {
+    color: #f9e2af;
+    background: #282828;
+}
+
+#workspaces button {
+    color: #f9e2af;
+    padding: 2px 2px;
+    margin: 10px 0 0 5px;
+}
+
+#workspaces button.active {
+    color: white;
+}
+
+#workspaces button:hover {
+    color: black;
+    border-radius: 5px;
+}
+
+#clock, #battery, #network, #pulseaudio, #tray, #cpu, #memory, #bluetooth, #custom-spotify, #window {
+    color: #EBDBB2;
+    padding: 2px 8px;
+    margin: 10px 5px 0 0;
+}
+
