@@ -11,8 +11,14 @@ OR EDIT THIS ONE ACCORDING TO THE WIKI INSTRUCTIONS.
 #
 
 # See https://wiki.hyprland.org/Configuring/Monitors/
-monitor=,preferred,auto,auto
 
+{{- if eq .chezmoi.hostname "hp-zbook" }}
+# https://wiki.hyprland.org/Configuring/Multi-GPU/
+# card1 = Nvidia, card2 = build in
+env = WLR_DRM_DEVICES,/dev/dri/card2:/dev/dri/card1
+{{- end }}
+
+monitor=,preferred,auto,auto
 monitor=eDP-1, 1920x1080, 0x0, 1 # build-in screen
 
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
