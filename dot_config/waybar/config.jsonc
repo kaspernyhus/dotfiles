@@ -8,12 +8,12 @@
     "height": 0,
     "modules-left": [
         "hyprland/workspaces",
-        "cpu",
-        "memory",
         "custom/spotify"
     ],
-    "modules-center": ["hyprland/window"],
+    "modules-center": ["clock"],
     "modules-right": [
+	"cpu",
+	"memory",
         "tray",
         "pulseaudio",
         "pulseaudio#microphone",
@@ -22,7 +22,6 @@
         "network#eth",
         "network#usb",
         "bluetooth",
-        "clock"
     ],
 
     "hyprland/window": {
@@ -52,7 +51,7 @@
         "spacing": 20
     },
     "clock": {
-        "format": "{:  %R    %d/%m}",
+        "format": "{:%a %e %b %R}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "pulseaudio": {
@@ -146,4 +145,3 @@
         "max-length": 50
     }
 }
-
