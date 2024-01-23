@@ -27,9 +27,12 @@ window#waybar {
     border-radius: 5px;
 }
 
-#clock, #battery, #network, #pulseaudio, #tray, #cpu, #memory, #bluetooth, #custom-spotify, #window {
+#clock, #battery, #network, #pulseaudio, #tray, #cpu, #memory, #bluetooth, #custom-spotify, #custom-wlogout, #window {
     color: #EBDBB2;
     padding: 2px 8px;
     margin: 10px 5px 0 0;
 }
 
+#custom-wlogout {
+   margin-right: 12px;
+}

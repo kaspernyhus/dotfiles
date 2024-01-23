@@ -24,8 +24,8 @@ monitor=eDP-1, 1920x1080, 0x0, 1 # build-in screen
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
 # Execute your favorite apps at launch
-exec-once = hyprpm reload -n
-exec-once = waybar & hyprpaper & dunst
+exec-once = hyprpm reload
+exec-once = waybar & hyprpaper & dunst & udiskie
 
 # Source a file (multi-file configs)
 # source = ~/.config/hypr/myColors.conf
@@ -159,6 +159,7 @@ bind = $mainMod, P, exec, wofi -n --show drun --sort-order=alphabetical -k "/dev
 bind = $mainMod, K, pseudo, # dwindle
 bind = $mainMod, J, togglesplit, # dwindle
 bind = $mainMod, B, exec, firefox
+bind = $mainMod, O, exec, obsidian
 
 bind = ALT, TAB, workspace, previous
 

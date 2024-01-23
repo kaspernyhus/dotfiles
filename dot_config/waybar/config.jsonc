@@ -22,6 +22,7 @@
         "network#eth",
         "network#usb",
         "bluetooth",
+	"custom/wlogout",
     ],
 
     "hyprland/window": {
@@ -143,5 +144,10 @@
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous",
         "max-length": 50
+    },
+    "custom/wlogout": {
+        "format": "",
+        "interval": "once",
+        "on-click": "wlogout -c 5 -r 5 -p layer-shell",
     }
 }
