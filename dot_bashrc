@@ -37,6 +37,10 @@ if [ -f ~/.git-completion.bash ]; then
    source ~/.git-completion.bash
 fi
 
+if [ -f ~/.bash-aliases ]; then
+. ~/.bash-aliases
+fi
+
 micmute_off() {
   echo 0 | sudo tee /sys/class/leds/platform\:\:micmute/brightness  
 }
