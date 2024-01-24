@@ -1,0 +1,18 @@
+alias lz=lazygit
+
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
+alias idf_b='idf.py build'
+alias idf_c='idf.py fullclean'
+alias idf_deploy='idf.py build flash monitor -p /dev/ttyACM0 '
+alias idf_uart_deploy='idf.py build flash monitor'
+alias idf_mon='idf.py monitor'
+alias idf_menu='idf.py menuconfig'
+alias idf_target_s3='idf.py set-target esp32s3'
+alias idf_erase_flash='idf.py erase-flash'
+alias idf_kill_mon='pgrep -f 'idf.py.*monitor' | xargs kill'
+
+alias reload='source ~/.bashrc'
+alias activate_venv='source .venv/bin/activate'
+alias make_venv='python3 -m venv .venv'
+
+
