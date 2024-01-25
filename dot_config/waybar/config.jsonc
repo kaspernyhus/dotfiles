@@ -8,13 +8,13 @@
     "height": 0,
     "modules-left": [
         "hyprland/workspaces",
-        "custom/spotify"
+        "custom/spotify",
+	"tray"
     ],
     "modules-center": ["clock"],
     "modules-right": [
 	"cpu",
 	"memory",
-        "tray",
         "pulseaudio",
         "pulseaudio#microphone",
         "battery",
@@ -47,7 +47,7 @@
         "max-length": 10
     },
     "tray": {
-        "icon-size": 13,
+        "icon-size": 16,
         "tooltip": false,
         "spacing": 20
     },
@@ -147,6 +147,7 @@
     },
     "custom/wlogout": {
         "format": "",
+	"tooltip": false,
         "interval": "once",
         "on-click": "wlogout -c 1 -r 1 -p layer-shell",
     }
