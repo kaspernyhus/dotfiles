@@ -85,7 +85,7 @@ bindl=, XF86AudioPlay, exec, playerctl play-pause
 bindl=, XF86AudioNext, exec, playerctl next 
 bindl=, XF86AudioPrev, exec, playerctl previous
 
-bindl=, switch: Lid Switch, exec, swaylock
+bindl=, switch: Lid Switch, exec, swaylock -e -F -i {{ .wallpaper }}
 
 
 # Backlight
