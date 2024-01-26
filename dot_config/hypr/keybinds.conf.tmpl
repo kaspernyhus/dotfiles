@@ -71,8 +71,9 @@ bind = $mainMod, L, exec, swaylock -e -F -i {{ .wallpaper }}
 # Audio
 binde=, XF86AudioRaiseVolume, exec, pamixer -i 2
 binde=, XF86AudioLowerVolume, exec, pamixer -d 2
-bindl=, XF86AudioMute, exec, amixer set Master toggle
-bindl=, XF86AudioPlay, exec, playerctl play-pause # key is a toggle
+bind =, XF86AudioMute, exec, amixer -D pulse set Master 1+ toggle
+bind =, XF86AudioMicMute, exec, amixer set Capture toggle
+bindl=, XF86AudioPlay, exec, playerctl play-pause
 bindl=, XF86AudioNext, exec, playerctl next 
 bindl=, XF86AudioPrev, exec, playerctl previous
 
