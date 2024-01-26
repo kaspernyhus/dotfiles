@@ -66,8 +66,8 @@ bindm = $mainMod, mouse:272, movewindow
 bindm = $mainMod, mouse:273, resizewindow
 
 # Lock screen
-exec-once = swayidle -w before-sleep 'swaylock -e -F -i .config/hypr/wallpaper/gruvbox_paper.png'
-bind = $mainMod, L, exec, swaylock -e -F -i .config/hypr/wallpaper/1920x1080-dark-linux.png
+exec-once = swayidle -w before-sleep 'swaylock -e -F -i {{ .wallpaper }}
+bind = $mainMod, L, exec, swaylock -e -F -i {{ .wallpaper }}
 
 # Audio
 binde=, XF86AudioRaiseVolume, exec, pamixer -i 2
