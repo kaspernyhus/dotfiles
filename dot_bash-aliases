@@ -2,7 +2,7 @@ alias shutdown='systemctl poweroff'
 alias sudp='sudo'
 
 alias lz=lazygit
-alias gs='git status'
+alias gs='git status -s'
 alias gc='git commit -m'
 alias gp='git pull'
 alias gP='git push'
