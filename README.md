@@ -1,5 +1,5 @@
 # My Arch dotfiles
-These are my very own dotfiles for my current Hyprland setup on Arch, have a look around!
+These are my very own dotfiles for my current Gruvbox themed Hyprland setup on Arch, have a look around!
 
 I manage them using [chezmoi](https://www.chezmoi.io/) so they are not direcly transferable, I guess.
 
