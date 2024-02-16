@@ -7,6 +7,7 @@ alias gc='git commit -m'
 alias gp='git pull'
 alias gP='git push'
 alias gf='git fetch -p'
+alias gl='git lg'
 
 alias cz=chezmoi
 alias py=python
