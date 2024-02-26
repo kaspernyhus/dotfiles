@@ -61,8 +61,8 @@
         "format-muted": " Muted",
         "on-click-right": "pavucontrol",
         "on-click": "pamixer -t",
-        "on-scroll-up": "pamixer -d 1",
-        "on-scroll-down": "pamixer -i 1",
+        "on-scroll-up": "pamixer -i 1",
+        "on-scroll-down": "pamixer -d 1",
         "scroll-step": 5,
         "format-icons": {
             "headphone": "",
@@ -81,8 +81,8 @@
         "format-source-muted": "  Muted",
         "on-click": "pamixer --default-source -t",
         "on-click-right": "pavucontrol",
-        "on-scroll-up": "pamixer --default-source -d 1",
-        "on-scroll-down": "pamixer --default-source -i 1",
+        "on-scroll-up": "pamixer --default-source -i 1",
+        "on-scroll-down": "pamixer --default-source -d 1",
         "scroll-step": 5
     },
     "battery": {
