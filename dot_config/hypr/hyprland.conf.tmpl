@@ -26,7 +26,7 @@ monitor=eDP-1, 1920x1080, 0x0, 1 # build-in screen
 # Execute your favorite apps at launch
 exec-once = hyprpm reload
 exec-once = waybar & hyprpaper & dunst & udiskie
-exec-once = swayidle -w timeout 600 'swaylock -f' timeout 1200 'systemctl suspend' after-resume 'hyprctl reload && hyprctl dispatch dpms on' before-sleep 'swaylock -f && hyprctl dispatch dpms off'
+exec-once = hypridle
 
 source = ~/.config/hypr/keybinds.conf
 
