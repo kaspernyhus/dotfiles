@@ -6,12 +6,16 @@
 #        |___/|_|                           
 # 
 
+general {
+    hide_cursor = true
+    grace = 30   
+}
+
 background {
     monitor =
     path = {{ .wallpaper }}
     color = rgba(25, 20, 20, 1.0)
 
-    # all these options are taken from hyprland, see https://wiki.hyprland.org/Configuring/Variables/#blur for explanations
     blur_passes = 3 # 0 disables blurring
     blur_size = 1
     noise = 0.0
