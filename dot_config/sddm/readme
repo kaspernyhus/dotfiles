@@ -1,1 +1,2 @@
 copy sddm.conf to /etc/sddm.conf.d/
+copy theme to /usr/share/sddm/theme
