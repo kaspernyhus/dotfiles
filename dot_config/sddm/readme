@@ -1,0 +1,1 @@
+copy sddm.conf to /etc/sddm.conf.d/
