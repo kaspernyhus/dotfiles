@@ -35,6 +35,10 @@ $terminal = kitty
 $fileManager = thunar
 $menu = wofi --show drun
 
+# Start programs on boot
+exec-once = [workspace 1 silent] kitty
+exec-once = [workspace 2 silent] firefox
+
 # Some default env vars.
 env = XCURSOR_SIZE,24
 
