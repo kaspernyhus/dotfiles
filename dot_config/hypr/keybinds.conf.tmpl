@@ -81,17 +81,20 @@ bind = $mainMod CONTROL, 2, movecurrentworkspacetomonitor, 1
 
 # Lock screen
 bind = $mainMod, L, exec, hyprlock
+bindl=, switch: Lid Switch, exec, hyprlock
+
 
 # Audio
-binde=, XF86AudioRaiseVolume, exec, pamixer -i 2
-binde=, XF86AudioLowerVolume, exec, pamixer -d 2
-bind =, XF86AudioMute, exec, amixer -D default set Master 1+ toggle
+binde =, XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
+binde =, XF86AudioRaiseVolume, exec, notify-send -r 1010 -t 500 -h int:value:"$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk -F' ' '{print $2*100}')" "Volume"
+binde =, XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
+binde =, XF86AudioLowerVolume, exec, notify-send -r 1010 -t 500 -h int:value:"$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk -F' ' '{print $2*100}')" 'Volume'
+bind =, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bind =, XF86AudioMicMute, exec, amixer set Capture toggle
+
 bindl=, XF86AudioPlay, exec, playerctl play-pause
 bindl=, XF86AudioNext, exec, playerctl next 
 bindl=, XF86AudioPrev, exec, playerctl previous
-
-bindl=, switch: Lid Switch, exec, hyprlock
 
 
 # Backlight
