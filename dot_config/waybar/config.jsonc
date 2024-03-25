@@ -111,7 +111,7 @@
 	"on-click-right": "iwgtk"
    },
    "network#eth": {
-        "interface": "enp8s0u1u3u3",
+        "interface": "enp4s0u1u3u3",
         "format": "{ifname}",
         "format-ethernet": "󰈀",
         "format-disconnected": "", //An empty format will hide the module.
