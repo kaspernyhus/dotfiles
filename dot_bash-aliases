@@ -9,6 +9,9 @@ alias gP='git push'
 alias gf='git fetch -p'
 alias gl='git lg'
 
+alias ghce='gh copilot explain'
+alias ghcs='gh copilot suggest'
+
 alias cz=chezmoi
 alias py=python
 
