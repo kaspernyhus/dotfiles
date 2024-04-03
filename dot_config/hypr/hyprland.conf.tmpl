@@ -88,6 +88,7 @@ decoration {
         enabled = true
         size = 3
         passes = 1
+	new_optimizations = on
     }
 
     drop_shadow = yes
@@ -166,3 +167,6 @@ plugin {
     bar_precedence_over_border = true
   }
 }
+
+# XDG setup
+exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
