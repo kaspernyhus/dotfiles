@@ -100,7 +100,7 @@
     "network#wlan": {
         "interface": "wlan0",
         "format": "{ifname}",
-        "format-wifi": " ",
+        "format-wifi": "  ({signalStrength}%)",
         "format-ethernet": "{ifname} ",
         "format-disconnected": "", //An empty format will hide the module.
         "format-disconnected": "",
