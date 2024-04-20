@@ -1,6 +1,8 @@
 alias shutdown='systemctl poweroff'
 alias sudp='sudo'
 
+alias update='sudo pacman -Syu && yay'
+
 alias lz=lazygit
 alias gs='git status -s'
 alias gc='git commit -m'
