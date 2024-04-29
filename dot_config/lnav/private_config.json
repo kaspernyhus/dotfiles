@@ -1,0 +1,32 @@
+{
+    "ui": {
+        "theme": "monocai",
+        "theme-defs": {
+            "monocai": {
+                "syntax-styles": {
+                    "string": {
+                        "color": "$white"
+                    },
+                    "variable": {
+                        "color": "#f6f6f6"
+                    },
+                    "file": {
+                        "color": "#f6f6f6"
+                    }
+                }
+            },
+            "default": {
+                "highlights": {
+                    "colors": {
+                        "pattern": "(mozart-application|mozart-health-monitor|mozart-fota-updater|mozart-airplay|mozart-audio-alsa-io|mozart-audio-identification|mozart-audio-tv|mozart-out-powerlink|mozart-audio-spotify|mozart-audio-deezer|mozart-audio-tidal|mozart-audio-mic|mozart-audio-linein|mozart-audio-usb-in|mozart-audio-overlay|mozart-audio-local|mozart-audio-uristreamer|mozart-audio-spdif|mozart-audio-generator|mozart-audio-dlna|mozart-audio-netradio|mozart-audio-classics-adapter|mozart-audio-beolink|mozart-audio-speakerlink|mozart-audio-jack-router|mozart-jack-renderer|mozart-audio-mixer)"
+                    }
+                }
+            }
+        }
+    },
+    "log": {
+        "date-time": {
+            "convert-zoned-to-local": false
+        }
+    }
+}
