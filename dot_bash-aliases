@@ -31,3 +31,5 @@ alias idf_kill_mon='pgrep -f 'idf.py.*monitor' | xargs kill'
 alias reload='source ~/.bashrc'
 alias activate_venv='source .venv/bin/activate'
 alias make_venv='python3 -m venv .venv && activate_venv && pip install --upgrade pip'
+
+alias ssh='TERM=xterm ssh'
