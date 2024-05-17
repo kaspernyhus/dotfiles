@@ -7,3 +7,6 @@ git:
     pager: delta --dark --paging=never
 
   branchLogCmd: "git log --graph --oneline {{branchName}} --"
+
+os:
+  editPreset: 'nvim'
