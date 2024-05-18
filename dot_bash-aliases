@@ -33,3 +33,5 @@ alias activate_venv='source .venv/bin/activate'
 alias make_venv='python3 -m venv .venv && activate_venv && pip install --upgrade pip'
 
 alias ssh='TERM=xterm ssh'
+alias wrap_off='setterm -linewrap off'
+alias wrap_on='setterm -linewrap on'
