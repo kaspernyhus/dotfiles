@@ -2,16 +2,17 @@
 $mainMod = SUPER
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
+bind = $mainMod, RETURN, exec, kitty
 bind = $mainMod, F, fullscreen, 1
 bind = $mainMod, E, exec, thunar
-bind = $mainMod, T, exec, kitty
-bind = $mainMod, C, killactive,
+bind = $mainMod, T, exec, google-chrome-stable https://teams.microsoft.com/v2/
+bind = $mainMod, Q, killactive,
 bind = $mainMod, V, togglefloating,
 bind = $mainMod, P, exec, wofi -n --show drun --sort-order=alphabetical -k "/dev/nul>"
 bind = $mainMod, J, togglesplit, # dwindle
 bind = $mainMod, B, exec, firefox
 bind = $mainMod, O, exec, obsidian
-bind = $mainMod, Q, exec, wlogout -c 1 -r 1 -p layer-shell
+bind = $mainMod, escape, exec, wlogout -c 1 -r 1 -p layer-shell
 bind = $mainMod, M, exec, google-chrome-stable https://mail.google.com/mail --new-window
 bind = $mainMod, A, exec, google-chrome-stable https://chat.openai.com/?model=gpt-4 --new-window
 bind = $mainMod, L, exec, gnome-calculator
@@ -82,7 +83,7 @@ bind = $mainMod ALT, 3, focusmonitor, 2
 
 
 # Lock screen
-bind = $mainMod, escape, exec, hyprlock
+bind = $mainMod, backspace, exec, hyprlock
 bindl=, switch: Lid Switch, exec, hyprlock
 
 
