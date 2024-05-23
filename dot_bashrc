@@ -47,3 +47,5 @@ micmute_off() {
 
 eval "$(thefuck --alias)"
 eval "$(fzf --bash)"
+
+export EDITOR=nvim
