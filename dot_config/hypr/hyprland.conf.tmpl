@@ -23,8 +23,13 @@ monitor=desc:HP Inc. HP Z24n G3 CN42050XNH, 1920x1200, 1920x0, 1
 # Execute your favorite apps at launch
 exec-once = hyprpm reload
 exec-once = waybar & hyprpaper & dunst & udiskie
-exec-once = hypridle
 exec-once = /usr/lib/polkit-kde-authentication-agent-1
+
+# hypridle is not working properly on my office laptop
+{{ if ne .chezmoi.hostname "hp-zbook }}
+exec-once = hypridle
+{{ end }}
+
 
 source = ~/.config/hypr/keybinds.conf
 
