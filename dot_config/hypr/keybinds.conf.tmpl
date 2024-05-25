@@ -102,8 +102,9 @@ bindl=, XF86AudioPrev, exec, playerctl previous
 
 # Backlight
 bindle=,XF86MonBrightnessDown,exec,brightnessctl set 5%-
+bindle=,XF86MonBrightnessDown,exec,notify-send -r 1010 -t 500 -h int:value:"$(brightnessctl -m | cut -d, -f4)" "brightness"
 bindle=,XF86MonBrightnessUp,exec,brightnessctl set +5%
-
+bindle=,XF86MonBrightnessUP,exec,notify-send -r 1010 -t 500 -h int:value:"$(brightnessctl -m | cut -d, -f4)" "brightness"
 
 # Screenshots
 bind = , print, exec, $HOME/.config/hypr/scripts/screenshots/captureAll.sh
