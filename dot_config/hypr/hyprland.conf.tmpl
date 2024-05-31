@@ -28,7 +28,7 @@ exec-once = wl-paste --type text --watch cliphist store #Stores only text data
 exec-once = wl-paste --type image --watch cliphist store #Stores only image data
 
 # hypridle is not working properly on my office laptop
-{{ if ne .chezmoi.hostname hp-zbook }}
+{{ if ne .chezmoi.hostname "hp-zbook" }}
 exec-once = hypridle
 {{ end }}
 
