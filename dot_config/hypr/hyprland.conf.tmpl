@@ -24,9 +24,11 @@ monitor=desc:HP Inc. HP Z24n G3 CN42050XNH, 1920x1200, 1920x0, 1
 exec-once = hyprpm reload
 exec-once = waybar & hyprpaper & dunst & udiskie
 exec-once = /usr/lib/polkit-kde-authentication-agent-1
+exec-once = wl-paste --type text --watch cliphist store #Stores only text data
+exec-once = wl-paste --type image --watch cliphist store #Stores only image data
 
 # hypridle is not working properly on my office laptop
-{{ if ne .chezmoi.hostname "hp-zbook" }}
+{{ if ne .chezmoi.hostname hp-zbook }}
 exec-once = hypridle
 {{ end }}
 
