@@ -11,7 +11,7 @@ bind = $mainMod, G, togglefloating,
 bind = $mainMod, P, exec, wofi -n --show drun --sort-order=alphabetical -k "/dev/nul>"
 bind = $mainMod, J, togglesplit, # dwindle
 bind = $mainMod, B, exec, firefox
-bind = $mainMod, O, exec, obsidian
+bind = $mainMod, O, exec, obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland
 bind = $mainMod, escape, exec, wlogout -c 1 -r 1 -p layer-shell
 bind = $mainMod, M, exec, google-chrome-stable https://mail.google.com/mail --new-window
 bind = $mainMod, A, exec, google-chrome-stable https://chat.openai.com/?model=gpt-4 --new-window
