@@ -59,7 +59,6 @@ remote_helvum() {
     fi
 
     rm -f ~/pipewire-0
-    ssh -nNT -L ~/pipewire-0:/run/pipewire/pipewire-0 root@"$ip_address" &
-    PIPEWIRE_RUNTIME_DIR=~/Desktop helvum
+    ssh -nNT -L ~/pipewire-0:/run/pipewire/pipewire-0 root@$ip_address &
+    PIPEWIRE_RUNTIME_DIR=~/ helvum
 }
-
