@@ -12,6 +12,10 @@ alias grep='grep --color=auto'
 #PS1='[\u@\h \W]\$ '
 
 
+HISTSIZE=2000
+HISTFILESIZE=2000
+
+
 # SSH-AGENT
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
