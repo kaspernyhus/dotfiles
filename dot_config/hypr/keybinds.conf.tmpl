@@ -89,6 +89,10 @@ bind = $mainMod, backspace, exec, hyprlock
 bindl=, switch: Lid Switch, exec, hyprlock
 
 
+# Hyprexpo
+bind = SUPER, space, hyprexpo:expo, toggle
+
+
 # Audio
 binde =, XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
 binde =, XF86AudioRaiseVolume, exec, notify-send -r 1010 -t 500 -h int:value:"$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk -F' ' '{print $2*100}')" "Volume"
