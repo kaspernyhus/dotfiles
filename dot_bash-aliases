@@ -1,6 +1,10 @@
 alias shutdown='systemctl poweroff'
 alias sudp='sudo'
 
+alias ..='cd ..'
+alias ...='cd ../..'
+
+
 alias update='sudo pacman -Syu && yay'
 
 alias lz=lazygit
