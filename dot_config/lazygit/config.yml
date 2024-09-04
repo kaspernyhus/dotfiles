@@ -10,3 +10,9 @@ git:
 
 os:
   editPreset: 'nvim'
+
+keybinding:
+  universal:
+    nextTab: 'ø'
+    prevTab: 'æ'
+
