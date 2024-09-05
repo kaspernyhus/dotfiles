@@ -6,7 +6,7 @@ git:
     colorArg: always
     pager: delta --dark --paging=never
 
-  branchLogCmd: "git log --graph --oneline --decorate --color {{branchName}}"
+  branchLogCmd: "git log --graph --oneline --decorate --decorate-refs-exclude=refs/tags --color {{branchName}}"
 
 os:
   editPreset: 'nvim'
