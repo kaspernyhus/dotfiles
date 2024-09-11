@@ -1,9 +1,9 @@
 alias shutdown='systemctl poweroff'
 alias sudp='sudo'
+alias sudo='sudo '
 
 alias ..='cd ..'
 alias ...='cd ../..'
-
 
 alias update='sudo pacman -Syu && yay'
 
