@@ -4,15 +4,14 @@ gui:
 git:
   paging:
     colorArg: always
-    pager: delta --dark --paging=never
+    pager: delta --dark --paging=never --line-numbers
 
   branchLogCmd: "git log --graph --oneline --decorate --decorate-refs-exclude=refs/tags --color {{branchName}}"
 
 os:
-  editPreset: 'nvim'
+  editPreset: "nvim"
 
 keybinding:
   universal:
-    nextTab: 'ø'
-    prevTab: 'æ'
-
+    nextTab: "ø"
+    prevTab: "æ"
