@@ -13,3 +13,5 @@ set inputbar-bg "#151515" #00 currently not used
 set inputbar-fg "#FFFFFF" #02
 
 set selection-clipboard clipboard
+
+map <C-i> recolor
