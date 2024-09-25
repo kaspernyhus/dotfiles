@@ -1,0 +1,6 @@
+[manager]
+
+prepend_keymap = [
+	{ on = "<C-Enter>", run = 'enter', desc = "Enter child dir" },
+	{ on = "<C-Backspace>", run = 'leave', desc = "Leave child dir" },
+]
