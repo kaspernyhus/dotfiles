@@ -22,7 +22,7 @@ unzip = [
 ]
 
 image = [
-  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+  { run = 'imv "$@"', orphan = true, desc = "imv", for = "linux" },
 ]
 
 video = [
@@ -53,9 +53,10 @@ rules = [
   { mime = "application/x-7z-compressed", use = "archive" },
   { mime = "application/x-rar", use = "archive" },
 
-  # { mime = "image/*", use = "image" },
+  { mime = "image/*", use = "image" },
+  { mime = "audio/*", use = "audio" },
+
   # { mime = "video/*", use = "video" },
-  # { mime = "audio/*", use = "audio" },
   # { mime = "application/json", use = "text" },
 ]
 
