@@ -1,6 +1,8 @@
 [manager]
 
 prepend_keymap = [
-	{ on = "<C-Enter>", run = 'enter', desc = "Enter child dir" },
-	{ on = "<C-Backspace>", run = 'leave', desc = "Leave child dir" },
+	{ on = "<Enter>", run = 'plugin --sync smart-enter', desc = "Enter child dir, or open the file" },
+	{ on = "<Backspace>", run = 'leave', desc = "Leave child dir" },
+  { on = "<C-s>", run = 'shell "$SHELL" --block --confirm' , desc = "Open shell" },
 ]
+

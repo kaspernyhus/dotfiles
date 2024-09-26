@@ -21,6 +21,14 @@ unzip = [
   { run = 'unzip "$@" -d "$(basename -s .zip "$@")" && rm -f "$@"', block = true, desc = "unzip", for = "linux" },
 ]
 
+tarm = [
+  { run = 'tarm "$@"', block = true, desc = "tarm", for = "linux" },
+]
+
+graphviz = [
+  { run = 'xdot "$@"', orphan = true, desc = "dot", for = "linux" },
+]
+
 image = [
   { run = 'imv "$@"', orphan = true, desc = "imv", for = "linux" },
 ]
@@ -41,6 +49,8 @@ fallback = [
 rules = [
   { name = "*.log", use = ["lnav", "edit"] },
   { name = "*.txt", use = ["lnav", "edit"] },
+  { name = "*.tgz", use = "tarm" },
+  { name = "*.dot", use = "graphviz" },
 
   { mime = "text/*", use = "edit" },
   { mime = "application/pdf", use = "pdf" },
