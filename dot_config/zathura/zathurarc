@@ -15,5 +15,9 @@ set inputbar-fg "#FFFFFF" #02
 set selection-clipboard clipboard
 
 map <C-i> recolor
+map j feedkeys "<C-Down>"
+map k feedkeys "<C-Up>"
+map <Down> feedkeys "<C-Down>"
+map <Up> feedkeys "<C-Up>"
 
 set default-bg rgba(0,0,0,0.7)
