@@ -40,3 +40,6 @@ alias make_venv='python3 -m venv .venv && activate_venv && pip install --upgrade
 alias ssh='kitten ssh'
 alias wrap_off='setterm -linewrap off'
 alias wrap_on='setterm -linewrap on'
+
+alias bluevpn='openconnect-sso -s beolanvpn.bang-olufsen.dk/bluevpn'
+
