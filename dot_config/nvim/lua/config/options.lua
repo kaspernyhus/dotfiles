@@ -3,3 +3,5 @@
 -- Add any additional options here
 vim.opt.winbar = "%=%m %f"
 vim.g.lazygit_config = false
+vim.g.gitblame_display_virtual_text = 0
+vim.g.gitblame_display_virtual_text = 0
