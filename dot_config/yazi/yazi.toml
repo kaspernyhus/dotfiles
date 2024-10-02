@@ -54,6 +54,7 @@ rules = [
 
   { mime = "text/*", use = "edit" },
   { mime = "application/pdf", use = "pdf" },
+  { mime = "application/json", use = ["lnav", "edit"] },
 
   { mime = "application/zip", use = "unzip" },
   { mime = "application/gzip", use = "archive" },
