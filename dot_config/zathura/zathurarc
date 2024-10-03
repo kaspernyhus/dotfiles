@@ -6,11 +6,11 @@ set smooth-scroll "true"
 set scroll-full-overlap 0.01
 set scroll-step 100
 
-set statusbar-fg "#12B0B0" #04
-set statusbar-bg "#202020" #01
+set statusbar-fg "#928374"
+set statusbar-bg "#202020"
 
 set inputbar-bg "#151515" #00 currently not used
-set inputbar-fg "#FFFFFF" #02
+set inputbar-fg "#FFFFFF"
 
 set selection-clipboard clipboard
 
