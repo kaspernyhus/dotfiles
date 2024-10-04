@@ -1,5 +1,8 @@
 use_nerdfont = true
 
+[keybindings]
+"Space" = "playpause"
+
 [theme]
 background = "default"
 primary = "#ebdbb2"
