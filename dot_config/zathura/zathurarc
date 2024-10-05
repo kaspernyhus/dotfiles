@@ -25,7 +25,7 @@ set default-bg rgba(0,0,0,0.7)
 map <C-i> recolor
 set recolor "true"
 set recolor-lightcolor "#282828"
-set recolor-darkcolor "#fcf0d2"
+set recolor-darkcolor "#d4be98"
 set recolor-reverse-video "true"
 set recolor-keephue "true"
 
