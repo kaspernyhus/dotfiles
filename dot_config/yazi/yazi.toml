@@ -5,37 +5,23 @@ sort_dir_first = true
 show_hidden = false
 
 [opener]
-edit = [
-  { run = 'nvim "$@"', block = true, desc = "neovim", for = "linux" },
-]
+edit = [{ run = 'nvim "$@"', block = true, desc = "neovim", for = "linux" }]
 
-lnav = [
-  { run = 'lnav "$@"', block = true, desc = "lnav", for = "linux" },
-]
+lnav = [{ run = 'lnav "$@"', block = true, desc = "lnav", for = "linux" }]
 
-pdf = [
-  { run = 'zathura "$@"', orphan = true, desc = "zathura", for = "linux" },
-]
+pdf = [{ run = 'zathura "$@"', orphan = true, desc = "zathura", for = "linux" }]
 
 unzip = [
   { run = 'unzip "$@" -d "$(basename -s .zip "$@")" && rm -f "$@"', block = true, desc = "unzip", for = "linux" },
 ]
 
-tarm = [
-  { run = 'tarm "$@"', block = true, desc = "tarm", for = "linux" },
-]
+tarm = [{ run = 'tarm "$@"', block = true, desc = "tarm", for = "linux" }]
 
-graphviz = [
-  { run = 'xdot "$@"', orphan = true, desc = "dot", for = "linux" },
-]
+graphviz = [{ run = 'xdot "$@"', orphan = true, desc = "dot", for = "linux" }]
 
-image = [
-  { run = 'imv "$@"', orphan = true, desc = "imv", for = "linux" },
-]
+image = [{ run = 'imv "$@"', orphan = true, desc = "imv", for = "linux" }]
 
-video = [
-  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
-]
+video = [{ run = 'vlc "$@"', orphan = true, desc = "xdg-open", for = "linux" }]
 
 audio = [
   { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
@@ -67,7 +53,6 @@ rules = [
   { mime = "image/*", use = "image" },
   { mime = "audio/*", use = "audio" },
 
-  # { mime = "video/*", use = "video" },
+  { mime = "video/*", use = "video" },
   # { mime = "application/json", use = "text" },
 ]
-
