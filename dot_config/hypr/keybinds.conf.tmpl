@@ -20,13 +20,13 @@ bind = $mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-co
 bind = $mainMod, Y, exec, kitty yazi
 bind = $mainMod, space, hyprexpo:expo, toggle
 
-{{ if .worklaptop }}
+{{- if .worklaptop }}
 # Work laptop only
 bind = $mainMod, T, exec, google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=UseOzonePlatform --ozone-platform=wayland https://teams.microsoft.com/v2/ --new-window
-{{ else }}
+{{- else }}
 # Personal laptop only
 bind = $mainMod, M, exec, google-chrome-stable https://mail.google.com/mail --new-window
-{{ end }}
+{{- end }}
 
 bind = ALT, TAB, workspace, previous
 
