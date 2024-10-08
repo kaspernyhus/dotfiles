@@ -18,16 +18,15 @@ bind = $mainMod, A, exec, google-chrome-stable https://chat.openai.com/?model=gp
 bind = $mainMod, L, exec, gnome-calculator
 bind = $mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy
 bind = $mainMod, Y, exec, kitty yazi
-
+bind = $mainMod, space, hyprexpo:expo, toggle
 
 {{ if .worklaptop }}
-  # Work laptop only
-  bind = $mainMod, T, exec, google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=UseOzonePlatform --ozone-platform=wayland https://teams.microsoft.com/v2/ --new-window
+# Work laptop only
+bind = $mainMod, T, exec, google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=UseOzonePlatform --ozone-platform=wayland https://teams.microsoft.com/v2/ --new-window
 {{ else }}
-  # Personal laptop only
-  bind = $mainMod, M, exec, google-chrome-stable https://mail.google.com/mail --new-window
+# Personal laptop only
+bind = $mainMod, M, exec, google-chrome-stable https://mail.google.com/mail --new-window
 {{ end }}
-
 
 bind = ALT, TAB, workspace, previous
 
@@ -103,10 +102,6 @@ bind = $mainMod, G, split:grabroguewindows
 # Lock screen
 bind = $mainMod, backspace, exec, hyprlock
 bindl=, switch: Lid Switch, exec, hyprlock
-
-
-# Hyprexpo
-bind = SUPER, space, hyprexpo:expo, toggle
 
 
 # Audio
