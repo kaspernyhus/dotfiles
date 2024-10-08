@@ -20,7 +20,7 @@ bind = $mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-co
 bind = $mainMod, Y, exec, kitty yazi
 
 
-{{ if eq .worklaptop "true" }}
+{{ if .worklaptop }}
   # Work laptop only
   bind = $mainMod, T, exec, google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=UseOzonePlatform --ozone-platform=wayland https://teams.microsoft.com/v2/ --new-window
 {{ else }}
