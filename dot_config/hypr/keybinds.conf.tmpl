@@ -7,7 +7,6 @@ $mainMod = SUPER
 bind = $mainMod, RETURN, exec, kitty
 bind = $mainMod, F, fullscreen, 1
 bind = $mainMod, E, exec, thunar
-bind = $mainMod, T, exec, google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=UseOzonePlatform --ozone-platform=wayland https://teams.microsoft.com/v2/ --new-window
 bind = $mainMod, Q, killactive,
 bind = $mainMod, G, togglefloating,
 bind = $mainMod, P, exec, wofi -n --show drun --sort-order=alphabetical -k "/dev/null"
@@ -15,11 +14,20 @@ bind = $mainMod, J, togglesplit, # dwindle
 bind = $mainMod, B, exec, firefox
 bind = $mainMod, O, exec, obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland
 bind = $mainMod, escape, exec, wlogout -c 1 -r 1 -p layer-shell
-bind = $mainMod, M, exec, google-chrome-stable https://mail.google.com/mail --new-window
 bind = $mainMod, A, exec, google-chrome-stable https://chat.openai.com/?model=gpt-4 --new-window
 bind = $mainMod, L, exec, gnome-calculator
 bind = $mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy
 bind = $mainMod, Y, exec, kitty yazi
+
+
+{{ if eq .worklaptop "true" }}
+  # Work laptop only
+  bind = $mainMod, T, exec, google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=UseOzonePlatform --ozone-platform=wayland https://teams.microsoft.com/v2/ --new-window
+{{ else }}
+  # Personal laptop only
+  bind = $mainMod, M, exec, google-chrome-stable https://mail.google.com/mail --new-window
+{{ end }}
+
 
 bind = ALT, TAB, workspace, previous
 
