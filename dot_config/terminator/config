@@ -1,0 +1,49 @@
+[global_config]
+  title_at_bottom = True
+  title_transmit_bg_color = "#1c71d8"
+  title_receive_bg_color = "#ffbe6f"
+  title_inactive_bg_color = "#9a9996"
+  inactive_color_offset = 0.8035714285714286
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
+  suppress_multiple_term_dialog = True
+  always_split_with_profile = True
+  case_sensitive = False
+[keybindings]
+[profiles]
+  [[default]]
+    background_color = "#200718"
+    cursor_color = "#aaaaaa"
+    font = Monospace 11
+    foreground_color = "#ffffff"
+    scrollback_lines = 5000
+    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    use_system_font = False
+  [[Argonaut]]
+    background_color = "#0e1019"
+    cursor_color = "#ff0018"
+    cursor_color_fg = False
+    font = Monospace 11
+    foreground_color = "#fffaf4"
+    scrollback_lines = 5000
+    palette = "#232323:#ff000f:#8ce10b:#ffb900:#008df8:#6d43a6:#00d8eb:#ffffff:#444444:#ff2740:#abe15b:#ffd242:#0092ff:#9a5feb:#67fff0:#ffffff"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 70:253
+      maximised = True
+      fullscreen = False
+      size = 1850, 1016
+      title = kaspernyhus@HP-ZBook: ~
+      last_active_term = 9948a68f-58b1-4759-a8cc-a3ca55100f0d
+      last_active_window = True
+    [[[terminal1]]]
+      type = Terminal
+      parent = child0
+      order = 0
+      profile = Argonaut
+      uuid = 9948a68f-58b1-4759-a8cc-a3ca55100f0d
+[plugins]
