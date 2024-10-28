@@ -54,15 +54,3 @@ eval "$(fzf --bash)"
 
 export EDITOR=nvim
 
-
-remote_helvum() {
-    ip_address="$1"
-
-    if [ -z "$ip_address" ]; then
-        read -p "Enter the IP address: " ip_address
-    fi
-
-    rm -f ~/pipewire-0
-    ssh -nNT -L ~/pipewire-0:/run/pipewire/pipewire-0 root@$ip_address &
-    PIPEWIRE_RUNTIME_DIR=~/ helvum
-}
