@@ -5,6 +5,8 @@ alias sudo='sudo '
 alias ..='cd ..'
 alias ...='cd ../..'
 
+alias cat="bat"
+
 alias update='sudo pacman -Syu && yay'
 
 alias lz=lazygit
