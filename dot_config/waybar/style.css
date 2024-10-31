@@ -15,7 +15,7 @@ window#waybar {
 #workspaces button {
     color: #f9e2af;
     padding: 2px 2px;
-    margin: 10px 0 0 5px;
+    margin: 5px 0 5px 5px;
 }
 
 #workspaces button.active {
@@ -31,7 +31,7 @@ window#waybar {
 
 #clock, #battery, #network, #pulseaudio, #tray, #cpu, #memory, #bluetooth, #custom-spotify, #custom-wlogout, #window {
     padding: 2px 8px;
-    margin: 10px 5px 0 0;
+    margin: 5px 0 5px 5px;
 }
 
 #custom-wlogout {
