@@ -4,7 +4,7 @@
 $mainMod = SUPER
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-bind = $mainMod, RETURN, exec, kitty
+bind = $mainMod, return, exec, kitty
 bind = $mainMod, F, fullscreen, 1
 bind = $mainMod, E, exec, thunar
 bind = $mainMod, Q, killactive,
@@ -18,8 +18,14 @@ bind = $mainMod, A, exec, google-chrome-stable https://chat.openai.com/?model=gp
 bind = $mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy
 bind = $mainMod, Y, exec, kitty yazi
 
+# Groups
+bind = $mainMod, G, togglegroup
+bind = $mainMod SHIFT, G, lockactivegroup, toggle
+bind = $mainMod, prior, changegroupactive, b
+bind = $mainMod, next, changegroupactive, f
+
 # Hyprsplit specific
-bind = $mainMod, G, split:grabroguewindows
+bind = $mainMod, R, split:grabroguewindows
 
 
 {{- if .worklaptop }}
