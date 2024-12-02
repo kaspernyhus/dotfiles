@@ -9,7 +9,7 @@ edit = [{ run = 'nvim "$@"', block = true, desc = "neovim", for = "linux" }]
 
 lnav = [{ run = 'lnav "$@"', block = true, desc = "lnav", for = "linux" }]
 
-pdf = [{ run = 'zathura "$@"', orphan = true, desc = "zathura", for = "linux" }]
+pdf = [{ run = 'evince "$@"', orphan = true, desc = "zathura", for = "linux" }]
 
 unzip = [
   { run = 'unzip "$@" -d "$(basename -s .zip "$@")" && rm -f "$@"', block = true, desc = "unzip", for = "linux" },
