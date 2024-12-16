@@ -37,7 +37,10 @@ alias idf_target_s3='idf.py set-target esp32s3'
 alias idf_erase_flash='idf.py erase-flash'
 alias idf_kill_mon='pgrep -f 'idf.py.*monitor' | xargs kill'
 
+alias go_west='source ~/zephyrproject/.venv/bin/activate'
+
 alias reload='source ~/.bashrc'
+
 alias activate_venv='source .venv/bin/activate'
 alias make_venv='python3 -m venv .venv && activate_venv && pip install --upgrade pip'
 
