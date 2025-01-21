@@ -57,6 +57,13 @@ export TERM=xterm
 
 # pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
+
+pyenv() {
+  eval "$(command pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+
+  pyenv "$@"
+}
 
