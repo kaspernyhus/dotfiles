@@ -1,0 +1,151 @@
+## USING HYPRSPLIT ##
+
+# See https://wiki.hyprland.org/Configuring/Keywords/ for more
+$mainMod = SUPER
+
+# Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
+bind = $mainMod, return, exec, kitty
+bind = $mainMod, F, fullscreen, 1
+bind = $mainMod, E, exec, thunar
+bind = $mainMod, Q, killactive,
+bind = $mainMod, I, togglefloating,
+bind = $mainMod, space, exec, wofi -n --show drun --sort-order=alphabetical -k "/dev/null"
+bind = $mainMod, U, togglesplit, # dwindle
+bind = $mainMod, B, exec, firefox
+bind = $mainMod, O, exec, obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland
+bind = $mainMod, escape, exec, wlogout -c 1 -r 1 -p layer-shell
+bind = $mainMod, A, exec, google-chrome-stable https://chat.openai.com/?model=gpt-4 --new-window
+bind = $mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy
+bind = $mainMod, Y, exec, kitty yazi
+
+# Groups
+bind = $mainMod, G, togglegroup
+bind = $mainMod SHIFT, G, lockactivegroup, toggle
+bind = $mainMod CTRL, prior, changegroupactive, b
+bind = $mainMod CTRL, next, changegroupactive, f
+
+# Next empty workspace
+bind = $mainMod, N, workspace, emptynm
+
+# Hyprsplit specific
+bind = $mainMod, R, split:grabroguewindows
+# Personal laptop only
+bind = $mainMod, M, exec, google-chrome-stable https://mail.google.com/mail --new-window
+
+bind = ALT, TAB, workspace, previous
+
+
+# Move focus
+bind = $mainMod, left, movefocus, l
+bind = $mainMod, right, movefocus, r
+bind = $mainMod, up, movefocus, u
+bind = $mainMod, down, movefocus, d
+bind = $mainMod, h, movefocus, l
+bind = $mainMod, l, movefocus, r
+bind = $mainMod, k, movefocus, u
+bind = $mainMod, j, movefocus, d
+
+
+# Move windows
+bind = $mainMod SHIFT, left, movewindoworgroup, l
+bind = $mainMod SHIFT, right, movewindoworgroup, r
+bind = $mainMod SHIFT, up, movewindoworgroup, u
+bind = $mainMod SHIFT, down, movewindoworgroup, d
+bind = $mainMod SHIFT, h, movewindoworgroup, l
+bind = $mainMod SHIFT, l, movewindoworgroup, r
+bind = $mainMod SHIFT, k, movewindoworgroup, u
+bind = $mainMod SHIFT, j, movewindoworgroup, d
+
+
+# Move active window to workspace left/right
+bind = $mainMod SHIFT_ALT, right, split:movetoworkspace, +1
+bind = $mainMod SHIFT_ALT, left, split:movetoworkspace, -1 
+bind = $mainMod SHIFT_ALT, l, split:movetoworkspace, +1
+bind = $mainMod SHIFT_ALT, h, split:movetoworkspace, -1 
+
+
+# Scroll through existing workspaces
+bind = $mainMod CTRL, right, workspace, e+1
+bind = $mainMod CTRL, left, workspace, e-1
+bind = $mainMod CTRL, l, workspace, e+1
+bind = $mainMod CTRL, h, workspace, e-1
+
+
+# Switch workspaces with mainMod + [0-9]
+bind = $mainMod, 1, split:workspace, 1
+bind = $mainMod, 2, split:workspace, 2
+bind = $mainMod, 3, split:workspace, 3
+bind = $mainMod, 4, split:workspace, 4
+bind = $mainMod, 5, split:workspace, 5
+bind = $mainMod, 6, split:workspace, 6
+bind = $mainMod, 7, split:workspace, 7
+bind = $mainMod, 8, split:workspace, 8
+bind = $mainMod, 9, split:workspace, 9
+bind = $mainMod, 0, split:workspace, 10
+
+
+# Move active window to a workspace with mainMod + SHIFT + [0-9]
+bind = $mainMod SHIFT, 1, split:movetoworkspace, 1
+bind = $mainMod SHIFT, 2, split:movetoworkspace, 2
+bind = $mainMod SHIFT, 3, split:movetoworkspace, 3
+bind = $mainMod SHIFT, 4, split:movetoworkspace, 4
+bind = $mainMod SHIFT, 5, split:movetoworkspace, 5
+bind = $mainMod SHIFT, 6, split:movetoworkspace, 6
+bind = $mainMod SHIFT, 7, split:movetoworkspace, 7
+bind = $mainMod SHIFT, 8, split:movetoworkspace, 8
+bind = $mainMod SHIFT, 9, split:movetoworkspace, 9
+bind = $mainMod SHIFT, 0, split:movetoworkspace, 10
+
+
+# Special workspace (scratchpad)
+bind = $mainMod, S, togglespecialworkspace, magic
+bind = $mainMod SHIFT, S, split:movetoworkspace, special:magic
+
+
+# Resize windows
+bindm = $mainMod, mouse:272, movewindow
+bindm = $mainMod, mouse:273, resizewindow
+bind = $mainMod ALT, right, resizeactive, 10 0
+bind = $mainMod ALT, left, resizeactive, -10 0
+bind = $mainMod ALT, up, resizeactive, 0 -10
+bind = $mainMod ALT, down, resizeactive, 0 10
+
+
+# Monitors
+bind = $mainMod SHIFT_ALT, 1, split:swapactiveworkspaces, current 0
+#bind = $mainMod ALT, 1, focusmonitor, 0
+bind = $mainMod SHIFT_ALT, 2, split:swapactiveworkspaces, current 1
+#bind = $mainMod ALT, 2, focusmonitor, 1
+bind = $mainMod SHIFT_ALT, 3, split:swapactiveworkspaces, current 2
+#bind = $mainMod ALT, 3, focusmonitor, 2
+
+
+# Lock screen
+bind = $mainMod, backspace, exec, hyprlock
+bindl=, switch: Lid Switch, exec, hyprlock
+
+
+# Audio
+binde =, XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
+binde =, XF86AudioRaiseVolume, exec, notify-send -r 1010 -t 500 -h int:value:"$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk -F' ' '{print $2*100}')" "Volume"
+binde =, XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
+binde =, XF86AudioLowerVolume, exec, notify-send -r 1010 -t 500 -h int:value:"$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk -F' ' '{print $2*100}')" 'Volume'
+bind =, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bind =, XF86AudioMicMute, exec, amixer set Capture toggle
+
+bindl=, XF86AudioPlay, exec, playerctl play-pause
+bindl=, XF86AudioNext, exec, playerctl next 
+bindl=, XF86AudioPrev, exec, playerctl previous
+
+
+# Backlight
+bindle=,XF86MonBrightnessDown,exec,brightnessctl set 5%-
+bindle=,XF86MonBrightnessDown,exec,notify-send -r 1010 -t 500 -h int:value:"$(brightnessctl -m | cut -d, -f4)" "brightness"
+bindle=,XF86MonBrightnessUp,exec,brightnessctl set +5%
+bindle=,XF86MonBrightnessUP,exec,notify-send -r 1010 -t 500 -h int:value:"$(brightnessctl -m | cut -d, -f4)" "brightness"
+
+# Screenshots
+bind = , print, exec, $HOME/.config/hypr/scripts/screenshots/captureAll.sh
+bind = CTRL, print, exec, $HOME/.config/hypr/scripts/screenshots/captureScreen.sh
+bind = CTRL SHIFT, print, exec, $HOME/.config/hypr/scripts/screenshots/captureArea.sh
+
