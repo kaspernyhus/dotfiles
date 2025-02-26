@@ -25,6 +25,7 @@ alias cz=chezmoi
 alias py=python
 
 alias z=zeditor
+alias y=yazi
 
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
 alias idf_b='idf.py build'
