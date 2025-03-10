@@ -37,7 +37,8 @@ bind = $mainMod, T, exec, google-chrome-stable --enable-features=UseOzonePlatfor
 {{- else}}
 
 # Personal laptop only
-bind = $mainMod, M, exec, google-chrome-stable https://mail.google.com/mail --new-window
+bind = $mainMod, M, exec, thunderbird
+bind = $mainMod, C, exec, gnome-calendar
 {{- end}}
 
 bind = ALT, TAB, workspace, previous
