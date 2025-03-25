@@ -186,12 +186,10 @@ device {
     sensitivity = -0.5
 }
 
-# Example windowrule v1
-windowrule = float, thunar
-windowrule = size 1100 700, ^(thunar)$
-windowrule = center, ^(thunar)$
-windowrule = float, ^(pavucontrol)$
-windowrule = float, ^(qalculate-qt)$
+
+# Windowrules
+windowrule = float, class:thunar
+windowrule = size 1100 700, class:thunar
 
 
 #plugin {
