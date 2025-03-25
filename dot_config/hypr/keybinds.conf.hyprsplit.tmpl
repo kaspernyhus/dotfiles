@@ -23,6 +23,8 @@ bind = $mainMod, G, togglegroup
 bind = $mainMod SHIFT, G, lockactivegroup, toggle
 bind = $mainMod CTRL, prior, changegroupactive, b
 bind = $mainMod CTRL, next, changegroupactive, f
+bind = $mainMod CTRL, s, changegroupactive, b
+bind = $mainMod CTRL, d, changegroupactive, f
 
 # Next empty workspace
 bind = $mainMod, N, workspace, emptynm
@@ -64,7 +66,8 @@ bind = $mainMod SHIFT, h, movewindoworgroup, l
 bind = $mainMod SHIFT, l, movewindoworgroup, r
 bind = $mainMod SHIFT, k, movewindoworgroup, u
 bind = $mainMod SHIFT, j, movewindoworgroup, d
-
+bind = $mainMod SHIFT, w, movewindoworgroup, l
+bind = $mainMod SHIFT, e, movewindoworgroup, r
 
 # Move active window to workspace left/right
 bind = $mainMod SHIFT_ALT, right, split:movetoworkspace, +1
@@ -78,6 +81,8 @@ bind = $mainMod CTRL, right, workspace, m+1
 bind = $mainMod CTRL, left, workspace, m-1
 bind = $mainMod CTRL, l, workspace, m+1
 bind = $mainMod CTRL, h, workspace, m-1
+bind = $mainMod CTRL, e, workspace, m+1
+bind = $mainMod CTRL, w, workspace, m-1
 
 
 # Switch workspaces with mainMod + [0-9]
@@ -107,8 +112,8 @@ bind = $mainMod SHIFT, 0, split:movetoworkspace, 10
 
 
 # Special workspace (scratchpad)
-bind = $mainMod, S, togglespecialworkspace, magic
-bind = $mainMod SHIFT, S, split:movetoworkspace, special:magic
+# bind = $mainMod, S, togglespecialworkspace, magic
+# bind = $mainMod SHIFT, S, split:movetoworkspace, special:magic
 
 
 # Resize windows
