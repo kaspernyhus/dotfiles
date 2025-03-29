@@ -158,6 +158,20 @@ bindle=,XF86MonBrightnessDown,exec,notify-send -r 1010 -t 500 -h int:value:"$(br
 bindle=,XF86MonBrightnessUp,exec,brightnessctl set +5%
 bindle=,XF86MonBrightnessUP,exec,notify-send -r 1010 -t 500 -h int:value:"$(brightnessctl -m | cut -d, -f4)" "brightness"
 
+bindle=$mainMod, F5, exec, hyprctl hyprsunset gamma -10
+bindle=$mainMod, F5, exec, notify-send -r 1010 -t 500 -h int:value:"$(hyprctl hyprsunset gamma)" "hyprsunset gamma"
+bindle=$mainMod, F6, exec, hyprctl hyprsunset gamma +10
+bindle=$mainMod, F6, exec, notify-send -r 1010 -t 500 -h int:value:"$(hyprctl hyprsunset gamma)" "hyprsunset gamma"
+bindle=$mainMod, F9, exec, hyprctl hyprsunset gamma 100
+bindle=$mainMod, F9, exec, notify-send -r 1010 -t 500 -h int:value:"$(hyprctl hyprsunset gamma)" "hyprsunset gamma"
+
+bindle=$mainMod, F4, exec, hyprctl hyprsunset temperature -200
+bindle=$mainMod, F4, exec, notify-send -r 1010 -t 500 "$(hyprctl hyprsunset temperature)" "hyprsunset temperature"
+bindle=$mainMod, F7, exec, hyprctl hyprsunset temperature +200
+bindle=$mainMod, F7, exec, notify-send -r 1010 -t 500 "$(hyprctl hyprsunset temperature)" "hyprsunset temperature"
+bindle=$mainMod, F8, exec, hyprctl hyprsunset identity
+bindle=$mainMod, F8, exec, notify-send -r 1010 -t 500 "hyprsunset blue-light filter disabled"
+
 # Screenshots
 bind = , print, exec, $HOME/.config/hypr/scripts/screenshots/captureAll.sh
 bind = CTRL, print, exec, $HOME/.config/hypr/scripts/screenshots/captureScreen.sh
