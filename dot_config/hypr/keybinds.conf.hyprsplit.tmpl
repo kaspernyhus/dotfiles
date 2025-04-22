@@ -71,16 +71,19 @@ bind = $mainMod SHIFT, e, movewindoworgroup, r
 
 
 # Move active window to workspace left/right
-bind = $mainMod SHIFT CTRL, right, split:movetoworkspace, +1
-bind = $mainMod SHIFT CTRL, left, split:movetoworkspace, -1 
-bind = $mainMod SHIFT CTRL, l, split:movetoworkspace, +1
-bind = $mainMod SHIFT CTRL, h, split:movetoworkspace, -1 
+bind = $mainMod SHIFT_CTRL, right, split:movetoworkspace, +1
+bind = $mainMod SHIFT_CTRL, left, split:movetoworkspace, -1 
+bind = $mainMod SHIFT_CTRL, l, split:movetoworkspace, +1
+bind = $mainMod SHIFT_CTRL, h, split:movetoworkspace, -1 
 
 
 # Swap active workspace between monitors
 bind = $mainMod SHIFT_CTRL, 1, split:swapactiveworkspaces, current 0
+bind = $mainMod SHIFT_CTRL, 1, focusmonitor, 0
 bind = $mainMod SHIFT_CTRL, 2, split:swapactiveworkspaces, current 1
+bind = $mainMod SHIFT_CTRL, 1, focusmonitor, 1
 bind = $mainMod SHIFT_CTRL, 3, split:swapactiveworkspaces, current 2
+bind = $mainMod SHIFT_CTRL, 1, focusmonitor, 2
 
 
 # Scroll through existing workspaces
