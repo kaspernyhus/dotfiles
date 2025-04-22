@@ -1,3 +1,5 @@
+## USING HYPRSPLIT ##
+
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 $mainMod = SUPER
 
@@ -21,10 +23,14 @@ bind = $mainMod, G, togglegroup
 bind = $mainMod SHIFT, G, lockactivegroup, toggle
 bind = $mainMod CTRL, prior, changegroupactive, b
 bind = $mainMod CTRL, next, changegroupactive, f
+bind = $mainMod CTRL, s, changegroupactive, b
+bind = $mainMod CTRL, d, changegroupactive, f
 
 # Next empty workspace
 bind = $mainMod, N, workspace, emptynm
 
+# Hyprsplit specific
+bind = $mainMod, R, split:grabroguewindows
 
 {{- if .worklaptop}}
 # Work laptop only
@@ -33,7 +39,8 @@ bind = $mainMod, T, exec, google-chrome-stable --enable-features=UseOzonePlatfor
 {{- else}}
 
 # Personal laptop only
-bind = $mainMod, M, exec, google-chrome-stable https://mail.google.com/mail --new-window
+bind = $mainMod, M, exec, thunderbird
+bind = $mainMod, C, exec, gnome-calendar
 {{- end}}
 
 bind = ALT, TAB, workspace, previous
@@ -59,13 +66,24 @@ bind = $mainMod SHIFT, h, movewindoworgroup, l
 bind = $mainMod SHIFT, l, movewindoworgroup, r
 bind = $mainMod SHIFT, k, movewindoworgroup, u
 bind = $mainMod SHIFT, j, movewindoworgroup, d
+bind = $mainMod SHIFT, w, movewindoworgroup, l
+bind = $mainMod SHIFT, e, movewindoworgroup, r
 
 
 # Move active window to workspace left/right
-bind = $mainMod SHIFT_ALT, right, movetoworkspace, +1
-bind = $mainMod SHIFT_ALT, left, movetoworkspace, -1 
-bind = $mainMod SHIFT_ALT, l, movetoworkspace, +1
-bind = $mainMod SHIFT_ALT, h, movetoworkspace, -1 
+bind = $mainMod SHIFT_CTRL, right, split:movetoworkspace, +1
+bind = $mainMod SHIFT_CTRL, left, split:movetoworkspace, -1 
+bind = $mainMod SHIFT_CTRL, l, split:movetoworkspace, +1
+bind = $mainMod SHIFT_CTRL, h, split:movetoworkspace, -1 
+
+
+# Swap active workspace between monitors
+bind = $mainMod SHIFT_CTRL, 1, split:swapactiveworkspaces, current 0
+bind = $mainMod SHIFT_CTRL, 1, focusmonitor, 0
+bind = $mainMod SHIFT_CTRL, 2, split:swapactiveworkspaces, current 1
+bind = $mainMod SHIFT_CTRL, 2, focusmonitor, 1
+bind = $mainMod SHIFT_CTRL, 3, split:swapactiveworkspaces, current 2
+bind = $mainMod SHIFT_CTRL, 3, focusmonitor, 2
 
 
 # Scroll through existing workspaces
@@ -73,37 +91,34 @@ bind = $mainMod CTRL, right, workspace, m+1
 bind = $mainMod CTRL, left, workspace, m-1
 bind = $mainMod CTRL, l, workspace, m+1
 bind = $mainMod CTRL, h, workspace, m-1
+bind = $mainMod CTRL, e, workspace, m+1
+bind = $mainMod CTRL, w, workspace, m-1
 
 
 # Switch workspaces with mainMod + [0-9]
-bind = $mainMod, 1, workspace, 1
-bind = $mainMod, 2, workspace, 2
-bind = $mainMod, 3, workspace, 3
-bind = $mainMod, 4, workspace, 4
-bind = $mainMod, 5, workspace, 5
-bind = $mainMod, 6, workspace, 6
-bind = $mainMod, 7, workspace, 7
-bind = $mainMod, 8, workspace, 8
-bind = $mainMod, 9, workspace, 9
-bind = $mainMod, 0, workspace, 10
+bind = $mainMod, 1, split:workspace, 1
+bind = $mainMod, 2, split:workspace, 2
+bind = $mainMod, 3, split:workspace, 3
+bind = $mainMod, 4, split:workspace, 4
+bind = $mainMod, 5, split:workspace, 5
+bind = $mainMod, 6, split:workspace, 6
+bind = $mainMod, 7, split:workspace, 7
+bind = $mainMod, 8, split:workspace, 8
+bind = $mainMod, 9, split:workspace, 9
+bind = $mainMod, 0, split:workspace, 10
 
 
 # Move active window to a workspace with mainMod + SHIFT + [0-9]
-bind = $mainMod SHIFT, 1, movetoworkspace, 1
-bind = $mainMod SHIFT, 2, movetoworkspace, 2
-bind = $mainMod SHIFT, 3, movetoworkspace, 3
-bind = $mainMod SHIFT, 4, movetoworkspace, 4
-bind = $mainMod SHIFT, 5, movetoworkspace, 5
-bind = $mainMod SHIFT, 6, movetoworkspace, 6
-bind = $mainMod SHIFT, 7, movetoworkspace, 7
-bind = $mainMod SHIFT, 8, movetoworkspace, 8
-bind = $mainMod SHIFT, 9, movetoworkspace, 9
-bind = $mainMod SHIFT, 0, movetoworkspace, 10
-
-
-# Special workspace (scratchpad)
-bind = $mainMod, S, togglespecialworkspace, magic
-bind = $mainMod SHIFT, S, movetoworkspace, special:magic
+bind = $mainMod SHIFT, 1, split:movetoworkspace, 1
+bind = $mainMod SHIFT, 2, split:movetoworkspace, 2
+bind = $mainMod SHIFT, 3, split:movetoworkspace, 3
+bind = $mainMod SHIFT, 4, split:movetoworkspace, 4
+bind = $mainMod SHIFT, 5, split:movetoworkspace, 5
+bind = $mainMod SHIFT, 6, split:movetoworkspace, 6
+bind = $mainMod SHIFT, 7, split:movetoworkspace, 7
+bind = $mainMod SHIFT, 8, split:movetoworkspace, 8
+bind = $mainMod SHIFT, 9, split:movetoworkspace, 9
+bind = $mainMod SHIFT, 0, split:movetoworkspace, 10
 
 
 # Resize windows
@@ -113,12 +128,6 @@ bind = $mainMod ALT, right, resizeactive, 10 0
 bind = $mainMod ALT, left, resizeactive, -10 0
 bind = $mainMod ALT, up, resizeactive, 0 -10
 bind = $mainMod ALT, down, resizeactive, 0 10
-
-
-# Monitors
-bind = $mainMod SHIFT_ALT, 1, swapactiveworkspaces, current 0
-bind = $mainMod SHIFT_ALT, 2, swapactiveworkspaces, current 1
-bind = $mainMod SHIFT_ALT, 3, swapactiveworkspaces, current 2
 
 
 # Lock screen
@@ -144,6 +153,20 @@ bindle=,XF86MonBrightnessDown,exec,brightnessctl set 5%-
 bindle=,XF86MonBrightnessDown,exec,notify-send -r 1010 -t 500 -h int:value:"$(brightnessctl -m | cut -d, -f4)" "brightness"
 bindle=,XF86MonBrightnessUp,exec,brightnessctl set +5%
 bindle=,XF86MonBrightnessUP,exec,notify-send -r 1010 -t 500 -h int:value:"$(brightnessctl -m | cut -d, -f4)" "brightness"
+
+bindle=$mainMod, F5, exec, hyprctl hyprsunset gamma -10
+bindle=$mainMod, F5, exec, notify-send -r 1010 -t 500 -h int:value:"$(hyprctl hyprsunset gamma)" "hyprsunset gamma"
+bindle=$mainMod, F6, exec, hyprctl hyprsunset gamma +10
+bindle=$mainMod, F6, exec, notify-send -r 1010 -t 500 -h int:value:"$(hyprctl hyprsunset gamma)" "hyprsunset gamma"
+bindle=$mainMod, F9, exec, hyprctl hyprsunset gamma 100
+bindle=$mainMod, F9, exec, notify-send -r 1010 -t 500 -h int:value:"$(hyprctl hyprsunset gamma)" "hyprsunset gamma"
+
+bindle=$mainMod, F4, exec, hyprctl hyprsunset temperature -200
+bindle=$mainMod, F4, exec, notify-send -r 1010 -t 500 "$(hyprctl hyprsunset temperature)" "hyprsunset temperature"
+bindle=$mainMod, F7, exec, hyprctl hyprsunset temperature +200
+bindle=$mainMod, F7, exec, notify-send -r 1010 -t 500 "$(hyprctl hyprsunset temperature)" "hyprsunset temperature"
+bindle=$mainMod, F8, exec, hyprctl hyprsunset identity
+bindle=$mainMod, F8, exec, notify-send -r 1010 -t 500 "hyprsunset blue-light filter disabled"
 
 # Screenshots
 bind = , print, exec, $HOME/.config/hypr/scripts/screenshots/captureAll.sh
