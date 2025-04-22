@@ -69,11 +69,18 @@ bind = $mainMod SHIFT, j, movewindoworgroup, d
 bind = $mainMod SHIFT, w, movewindoworgroup, l
 bind = $mainMod SHIFT, e, movewindoworgroup, r
 
+
 # Move active window to workspace left/right
-bind = $mainMod SHIFT_ALT, right, split:movetoworkspace, +1
-bind = $mainMod SHIFT_ALT, left, split:movetoworkspace, -1 
-bind = $mainMod SHIFT_ALT, l, split:movetoworkspace, +1
-bind = $mainMod SHIFT_ALT, h, split:movetoworkspace, -1 
+bind = $mainMod SHIFT CTRL, right, split:movetoworkspace, +1
+bind = $mainMod SHIFT CTRL, left, split:movetoworkspace, -1 
+bind = $mainMod SHIFT CTRL, l, split:movetoworkspace, +1
+bind = $mainMod SHIFT CTRL, h, split:movetoworkspace, -1 
+
+
+# Swap active workspace between monitors
+bind = $mainMod SHIFT_CTRL, 1, split:swapactiveworkspaces, current 0
+bind = $mainMod SHIFT_CTRL, 2, split:swapactiveworkspaces, current 1
+bind = $mainMod SHIFT_CTRL, 3, split:swapactiveworkspaces, current 2
 
 
 # Scroll through existing workspaces
@@ -111,11 +118,6 @@ bind = $mainMod SHIFT, 9, split:movetoworkspace, 9
 bind = $mainMod SHIFT, 0, split:movetoworkspace, 10
 
 
-# Special workspace (scratchpad)
-# bind = $mainMod, S, togglespecialworkspace, magic
-# bind = $mainMod SHIFT, S, split:movetoworkspace, special:magic
-
-
 # Resize windows
 bindm = $mainMod, mouse:272, movewindow
 bindm = $mainMod, mouse:273, resizewindow
@@ -123,15 +125,6 @@ bind = $mainMod ALT, right, resizeactive, 10 0
 bind = $mainMod ALT, left, resizeactive, -10 0
 bind = $mainMod ALT, up, resizeactive, 0 -10
 bind = $mainMod ALT, down, resizeactive, 0 10
-
-
-# Monitors
-bind = $mainMod SHIFT_ALT, 1, split:swapactiveworkspaces, current 0
-#bind = $mainMod ALT, 1, focusmonitor, 0
-bind = $mainMod SHIFT_ALT, 2, split:swapactiveworkspaces, current 1
-#bind = $mainMod ALT, 2, focusmonitor, 1
-bind = $mainMod SHIFT_ALT, 3, split:swapactiveworkspaces, current 2
-#bind = $mainMod ALT, 3, focusmonitor, 2
 
 
 # Lock screen
