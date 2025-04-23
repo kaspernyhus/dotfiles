@@ -134,6 +134,7 @@ bind = $mainMod ALT, down, resizeactive, 0 10
 bind = $mainMod, backspace, exec, hyprlock
 bindl = , switch:off:Lid Switch, exec, hyprlock --immediate
 
+
 # Audio
 binde =, XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
 binde =, XF86AudioRaiseVolume, exec, notify-send -r 1010 -t 500 -h int:value:"$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk -F' ' '{print $2*100}')" "Volume"
