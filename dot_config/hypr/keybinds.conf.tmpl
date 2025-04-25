@@ -57,6 +57,19 @@ bind = $mainMod, k, movefocus, u
 bind = $mainMod, j, movefocus, d
 
 
+# Switch workspaces
+bind = $mainMod, 1, split:workspace, 1
+bind = $mainMod, 2, split:workspace, 2
+bind = $mainMod, 3, split:workspace, 3
+bind = $mainMod, 4, split:workspace, 4
+bind = $mainMod, 5, split:workspace, 5
+bind = $mainMod, 6, split:workspace, 6
+bind = $mainMod, 7, split:workspace, 7
+bind = $mainMod, 8, split:workspace, 8
+bind = $mainMod, 9, split:workspace, 9
+bind = $mainMod, 0, split:workspace, 10
+
+
 # Move windows
 bind = $mainMod SHIFT, left, movewindoworgroup, l
 bind = $mainMod SHIFT, right, movewindoworgroup, r
@@ -70,20 +83,26 @@ bind = $mainMod SHIFT, w, movewindoworgroup, l
 bind = $mainMod SHIFT, e, movewindoworgroup, r
 
 
+# Move active window to a workspace
+bind = $mainMod SHIFT, 1, split:movetoworkspace, 1
+bind = $mainMod SHIFT, 2, split:movetoworkspace, 2
+bind = $mainMod SHIFT, 3, split:movetoworkspace, 3
+bind = $mainMod SHIFT, 4, split:movetoworkspace, 4
+bind = $mainMod SHIFT, 5, split:movetoworkspace, 5
+bind = $mainMod SHIFT, 6, split:movetoworkspace, 6
+bind = $mainMod SHIFT, 7, split:movetoworkspace, 7
+bind = $mainMod SHIFT, 8, split:movetoworkspace, 8
+bind = $mainMod SHIFT, 9, split:movetoworkspace, 9
+bind = $mainMod SHIFT, 0, split:movetoworkspace, 10
+
+# Move active window to next empty workspace
+bind = $mainMod SHIFT, n, movetoworkspace, emptynm
+
 # Move active window to workspace left/right
 bind = $mainMod SHIFT_CTRL, right, split:movetoworkspace, +1
 bind = $mainMod SHIFT_CTRL, left, split:movetoworkspace, -1 
 bind = $mainMod SHIFT_CTRL, l, split:movetoworkspace, +1
 bind = $mainMod SHIFT_CTRL, h, split:movetoworkspace, -1 
-
-
-# Swap active workspace between monitors
-bind = $mainMod SHIFT_CTRL, 1, split:swapactiveworkspaces, current 0
-bind = $mainMod SHIFT_CTRL, 1, focusmonitor, 0
-bind = $mainMod SHIFT_CTRL, 2, split:swapactiveworkspaces, current 1
-bind = $mainMod SHIFT_CTRL, 2, focusmonitor, 1
-bind = $mainMod SHIFT_CTRL, 3, split:swapactiveworkspaces, current 2
-bind = $mainMod SHIFT_CTRL, 3, focusmonitor, 2
 
 
 # Scroll through existing workspaces
@@ -97,30 +116,13 @@ bind = $mainMod CTRL, r, movefocus, r
 bind = $mainMod CTRL, q, movefocus, l
 
 
-# Switch workspaces with mainMod + [0-9]
-bind = $mainMod, 1, split:workspace, 1
-bind = $mainMod, 2, split:workspace, 2
-bind = $mainMod, 3, split:workspace, 3
-bind = $mainMod, 4, split:workspace, 4
-bind = $mainMod, 5, split:workspace, 5
-bind = $mainMod, 6, split:workspace, 6
-bind = $mainMod, 7, split:workspace, 7
-bind = $mainMod, 8, split:workspace, 8
-bind = $mainMod, 9, split:workspace, 9
-bind = $mainMod, 0, split:workspace, 10
-
-
-# Move active window to a workspace with mainMod + SHIFT + [0-9]
-bind = $mainMod SHIFT, 1, split:movetoworkspace, 1
-bind = $mainMod SHIFT, 2, split:movetoworkspace, 2
-bind = $mainMod SHIFT, 3, split:movetoworkspace, 3
-bind = $mainMod SHIFT, 4, split:movetoworkspace, 4
-bind = $mainMod SHIFT, 5, split:movetoworkspace, 5
-bind = $mainMod SHIFT, 6, split:movetoworkspace, 6
-bind = $mainMod SHIFT, 7, split:movetoworkspace, 7
-bind = $mainMod SHIFT, 8, split:movetoworkspace, 8
-bind = $mainMod SHIFT, 9, split:movetoworkspace, 9
-bind = $mainMod SHIFT, 0, split:movetoworkspace, 10
+# Swap active workspace between monitors
+bind = $mainMod SHIFT_CTRL, 1, split:swapactiveworkspaces, current 0
+bind = $mainMod SHIFT_CTRL, 1, focusmonitor, 0
+bind = $mainMod SHIFT_CTRL, 2, split:swapactiveworkspaces, current 1
+bind = $mainMod SHIFT_CTRL, 2, focusmonitor, 1
+bind = $mainMod SHIFT_CTRL, 3, split:swapactiveworkspaces, current 2
+bind = $mainMod SHIFT_CTRL, 3, focusmonitor, 2
 
 
 # Resize windows
