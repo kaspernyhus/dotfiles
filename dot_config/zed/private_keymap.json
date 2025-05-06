@@ -8,6 +8,7 @@
 [
   {
     "bindings": {
+      "ctrl-shift-l": "workspace::ToggleCenteredLayout",
       "ctrl-w": "pane::CloseActiveItem",
       "ctrl-t": "workspace::NewCenterTerminal",
       "tab": "menu::SelectNext",
