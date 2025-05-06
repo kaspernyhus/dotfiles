@@ -30,6 +30,12 @@
     }
   },
   {
+    "context": "vim_mode == normal",
+    "bindings": {
+      "g b": "editor::ToggleGitBlameInline"
+    }
+  },
+  {
     "context": "VimControl && !menu",
     "bindings": {
       "enter": "editor::NewlineBelow",
@@ -49,7 +55,6 @@
       "ctrl-v": "editor::Paste", // vim default: visual block mode
       "ctrl-,": "pane::GoBack",
       "ctrl-.": "pane::GoForward",
-      "g b": "editor::ToggleGitBlameInline"
     }
   },
   {
