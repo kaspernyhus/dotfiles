@@ -1,0 +1,60 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "bindings": {
+      "ctrl-w": "pane::CloseActiveItem",
+      "ctrl-t": "workspace::NewCenterTerminal",
+      "tab": "menu::SelectNext",
+      "shift-tab": "menu::SelectPrevious"
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "ctrl-x ctrl-c": "editor::ShowEditPrediction",
+      "ctrl-x ctrl-o": "editor::ShowCompletions",
+      "ctrl-x ctrl-a": "assistant::InlineAssist"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-s": ["vim::PushAddSurrounds", {}]
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "enter": "editor::NewlineBelow",
+      "ctrl-f": "buffer_search::Deploy", // vim default: page down
+      "g s": "outline::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-k": "editor::MoveLineUp",
+      "alt-j": "editor::MoveLineDown",
+      "ctrl-enter": "editor::NewlineAbove",
+      "ctrl-a": "editor::SelectAll", // vim default: increment
+      "ctrl-c": "editor::Copy", // vim default: return to normal mode
+      // "ctrl-x": "editor::Cut", // vim default: decrement
+      "ctrl-v": "editor::Paste", // vim default: visual block mode
+      "ctrl-,": "pane::GoBack",
+      "ctrl-.": "pane::GoForward",
+      "g b": "editor::ToggleGitBlameInline"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-e": "project_panel::ToggleFocus"
+    }
+  }
+]
