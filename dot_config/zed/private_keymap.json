@@ -20,7 +20,9 @@
     "bindings": {
       "ctrl-x ctrl-c": "editor::ShowEditPrediction",
       "ctrl-x ctrl-o": "editor::ShowCompletions",
-      "ctrl-x ctrl-a": "assistant::InlineAssist"
+      "ctrl-x ctrl-a": "assistant::InlineAssist",
+      "j j": ["workspace::SendKeystrokes", "escape"],
+      "j k": ["workspace::SendKeystrokes", "escape"]
     }
   },
   {
