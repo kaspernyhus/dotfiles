@@ -8,12 +8,15 @@
 // from the command palette or from `Zed` application menu.
 {
   // AI stuff
-  "assistant": {
+  "agent": {
     "default_model": {
       "provider": "copilot_chat",
       "model": "gpt-4o"
     },
     "version": "2"
+  },
+  "features": {
+    "edit_prediction_provider": "copilot"
   },
   "show_edit_predictions": false,
 
@@ -50,10 +53,10 @@
   },
   "indent_guides": {
     "enabled": true,
-        "line_width": 1,
-        "active_line_width": 2,
-        "coloring": "fixed",
-        "background_coloring": "disabled"
+    "line_width": 1,
+    "active_line_width": 2,
+    "coloring": "fixed",
+    "background_coloring": "disabled"
   },
   "preview_tabs": {
     "enabled": false
@@ -65,12 +68,13 @@
   },
   "wrap_guides": [120],
   "show_wrap_guides": true,
+  "tab_size": 4,
   "format_on_save": "off",
 
   // Theme
   "theme": {
     "mode": "dark",
-    "light": "VSCode Dark Modern",
+    "light": "One Light",
     "dark": "Gruvbox Material"
   },
   "experimental.theme_overrides": {
@@ -85,5 +89,55 @@
   "centered_layout": {
     "left_padding": 0.17,
     "right_padding": 0.17
+  },
+
+  // Languages
+  "languages": {
+    "JSONC": {
+      "tab_size": 2
+    },
+    "HTML": {
+      "tab_size": 2,
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "djlint",
+          "arguments": [
+            "-",
+            "--reformat",
+            "--format-css",
+            "--format-js",
+            "--indent",
+            "2",
+            "--max-blank-lines",
+            "2",
+            "--profile",
+            "django",
+            "--quiet"
+          ]
+        }
+      }
+    },
+    "Python": {
+      "tab_size": 4,
+      "format_on_save": "on",
+      "language_servers": ["ruff"],
+      "formatter": [
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    }
+  },
+  "lsp": {
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "lineLength": 120
+        }
+      }
+    }
   }
 }
