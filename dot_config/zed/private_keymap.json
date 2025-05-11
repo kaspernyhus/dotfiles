@@ -129,14 +129,5 @@
       "space e": "workspace::ToggleLeftDock",
       "space space": "file_finder::Toggle"
     }
-  },
-
-  // Close LazyGit terminal
-  {
-    "context": "Terminal",
-    "bindings": {
-      "space e": "workspace::ToggleLeftDock",
-      "space g": "pane::CloseActiveItem"
-    }
   }
 ]
