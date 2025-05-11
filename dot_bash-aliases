@@ -2,7 +2,7 @@ alias shutdown='systemctl poweroff'
 alias sudp='sudo'
 alias sudo='sudo '
 
-alias cd=zoxide
+alias cd=j
 
 alias ..='cd ..'
 alias ...='cd ../..'
