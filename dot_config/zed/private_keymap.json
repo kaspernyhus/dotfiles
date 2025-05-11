@@ -131,13 +131,12 @@
     }
   },
 
-
   // Close LazyGit terminal
   {
     "context": "Terminal",
     "bindings": {
+      "space e": "workspace::ToggleLeftDock",
       "space g": "pane::CloseActiveItem"
     }
-  },
-
+  }
 ]
