@@ -41,6 +41,8 @@ if [ -f ~/.git-completion.bash ]; then
    source ~/.git-completion.bash
 fi
 
+eval "$(zoxide init bash)"
+
 if [ -f ~/.bash-aliases ]; then
 . ~/.bash-aliases
 fi
