@@ -1,6 +1,6 @@
 // Zed keymap
 //
-// For information on binding keys, see the Zed
+// For information hover:text- on binding keys, see the Zed
 // documentation: https://zed.dev/docs/key-bindings
 //
 // To see the default key bindings run `zed: open default keymap`
@@ -15,14 +15,19 @@
       "shift-tab": "menu::SelectPrevious"
     }
   },
+
+  // Vim modes
   {
     "context": "vim_mode == insert",
     "bindings": {
       "ctrl-x ctrl-c": "editor::ShowEditPrediction",
       "ctrl-x ctrl-o": "editor::ShowCompletions",
       "ctrl-x ctrl-a": "assistant::InlineAssist",
+      // "tab": "editor::NextEditPrediction",
+      // "shift-tab": "editor::PreviousEditPrediction",
       "j j": ["workspace::SendKeystrokes", "escape"],
-      "j k": ["workspace::SendKeystrokes", "escape"]
+      "j k": ["workspace::SendKeystrokes", "escape"],
+      "ctrl-s": ["workspace::SendKeystrokes", "escape ctrl-s"]
     }
   },
   {
@@ -38,11 +43,50 @@
     }
   },
   {
+    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+    "bindings": {
+      "space o": "vim::ToggleMarksView",
+      "space a h": [ "workspace::SendKeystrokes", "m shift-a" ],
+      "space a j": [ "workspace::SendKeystrokes", "m shift-b" ],
+      "space a k": [ "workspace::SendKeystrokes", "m shift-c" ],
+      "space a l": [ "workspace::SendKeystrokes", "m shift-d" ],
+      "space h": [ "workspace::SendKeystrokes", "` shift-a" ],
+      "space j": [ "workspace::SendKeystrokes", "` shift-b" ],
+      "space k": [ "workspace::SendKeystrokes", "` shift-c" ],
+      "space l": [ "workspace::SendKeystrokes", "` shift-d" ],
+      "space g": [
+        "task::Spawn",
+        { "task_name": "start lazygit", "reveal_target": "center" }
+      ],
+      // Tab things. Almost as good as harpoon.
+      "space 1": ["pane::ActivateItem", 0],
+      "space 2": ["pane::ActivateItem", 1],
+      "space 3": ["pane::ActivateItem", 2],
+      "space 4": ["pane::ActivateItem", 3],
+      "space 5": ["pane::ActivateItem", 4],
+      "space 6": ["pane::ActivateItem", 5],
+      "space 7": ["pane::ActivateItem", 6],
+      "space 8": ["pane::ActivateItem", 7],
+      "space 9": ["pane::ActivateItem", 8],
+      "space 0": "pane::ActivateLastItem",
+      // "Telescope" things.
+      "space space": "file_finder::Toggle"
+    }
+  },
+
+  // Editor
+  {
+    "context": "VimControl && multibuffer",
+    "bindings": {
+      "n": "editor::FindNextMatch",
+      "shift-n": "editor::FindPreviousMatch"
+    }
+  },
+  {
     "context": "VimControl && !menu",
     "bindings": {
       "enter": "editor::NewlineBelow",
-      "ctrl-f": "buffer_search::Deploy", // vim default: page down
-      "g s": "outline::Toggle"
+      "ctrl-f": "buffer_search::Deploy"
     }
   },
   {
@@ -54,15 +98,46 @@
       "ctrl-a": "editor::SelectAll", // vim default: increment
       "ctrl-c": "editor::Copy", // vim default: return to normal mode
       // "ctrl-x": "editor::Cut", // vim default: decrement
-      "ctrl-v": "editor::Paste", // vim default: visual block mode
-      "ctrl-,": "pane::GoBack",
-      "ctrl-.": "pane::GoForward",
+      "ctrl-v": "editor::Paste" // vim default: visual block mode
     }
   },
   {
-    "context": "Workspace",
+    "context": "multibuffer",
     "bindings": {
-      "cmd-shift-e": "project_panel::ToggleFocus"
+      "g f": "editor::OpenExcerpts"
     }
-  }
+  },
+
+  // File explorer
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock",
+      "a": "project_panel::NewFile",
+      "A": "project_panel::NewDirectory",
+      "d": "project_panel::Delete",
+      "r": "project_panel::Rename",
+      "y": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "x": "project_panel::Cut",
+      "c": "project_panel::CollapseSelectedEntry"
+    }
+  },
+  {
+    "context": "Editor && VimControl || EmptyPane",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock",
+      "space space": "file_finder::Toggle"
+    }
+  },
+
+
+  // Close LazyGit terminal
+  {
+    "context": "Terminal",
+    "bindings": {
+      "space g": "pane::CloseActiveItem"
+    }
+  },
+
 ]
