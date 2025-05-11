@@ -3,6 +3,7 @@ alias sudp='sudo'
 alias sudo='sudo '
 
 alias cd=j
+alias cf=ji
 
 alias ..='cd ..'
 alias ...='cd ../..'
