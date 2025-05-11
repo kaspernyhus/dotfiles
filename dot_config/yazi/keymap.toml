@@ -4,5 +4,4 @@ prepend_keymap = [
   { on = "<Enter>", run = 'plugin smart-enter', desc = "Enter child dir, or open the file" },
   { on = "<Backspace>", run = 'leave', desc = "Leave child dir" },
   { on = "<C-s>", run = 'shell "$SHELL" --block --confirm', desc = "Open shell" },
-  { on = "q", run = 'noop' },
 ]
