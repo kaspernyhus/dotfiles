@@ -88,11 +88,21 @@
     "panel.background": "#222424",
     "status_bar.background": "#222424",
     "tab_bar.background": "#222424",
-    "toolbar.background": "#222424"
+    "toolbar.background": "#222424",
+    // Terminal
+    "terminal.background": "#222424",
+    "terminal.foreground": "#ebdbb2",
+    "terminal.ansi.red": "#cc241d",
+    "terminal.ansi.green": "#98971a",
+    "terminal.ansi.yellow": "#d79921",
+    "terminal.ansi.blue": "#458588"
   },
   "centered_layout": {
     "left_padding": 0.17,
     "right_padding": 0.17
+  },
+  "terminal": {
+    "font_family": "FiraCode Nerd Font"
   },
 
   // Languages
@@ -125,7 +135,7 @@
     "Python": {
       "tab_size": 4,
       "format_on_save": "on",
-      "language_servers": ["ruff"],
+      // "language_servers": ["ruff"],
       "formatter": [
         {
           "language_server": {
