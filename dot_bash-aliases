@@ -10,8 +10,6 @@ alias ...='cd ../..'
 
 alias cat="bat"
 
-alias update='sudo pacman -Syu && yay'
-
 alias lz=lazygit
 alias v=nvim
 alias gs='git status -s'
