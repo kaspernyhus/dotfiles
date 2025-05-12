@@ -107,6 +107,22 @@
       "g f": "editor::OpenExcerpts"
     }
   },
+  {
+    "context": "Pane",
+    "bindings": {
+      "alt-s": "pane::SplitRight",
+      "alt-left": "workspace::ActivatePaneLeft",
+      "alt-right": "workspace::ActivatePaneRight",
+      "alt-h": "workspace::ActivatePaneLeft",
+      "alt-l": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "FileFinder || (FileFinder > Picker > Editor) || (FileFinder > Picker > menu)",
+    "bindings": {
+      "ctrl-enter": "pane::SplitRight"
+    }
+  },
 
   // File explorer
   {
@@ -127,7 +143,7 @@
     "context": "Editor && VimControl || EmptyPane",
     "bindings": {
       "space e": "workspace::ToggleLeftDock",
-      "space space": "file_finder::Toggle"
+      "space f": "file_finder::Toggle"
     }
   }
 ]
