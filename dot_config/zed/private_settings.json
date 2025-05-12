@@ -26,6 +26,10 @@
     "quick_actions": false,
     "selections_menu": false
   },
+  "file_finder": {
+    "modal_max_width": "medium",
+    "file_icons": false
+  },
 
   // Fonts
   "ui_font_family": "FiraCode Nerd Font",
