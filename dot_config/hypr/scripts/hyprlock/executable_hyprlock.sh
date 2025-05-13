@@ -1,5 +1,11 @@
 #!/bin/bash
 
+
+SCRIPT_DIR="$HOME/.config/hypr/scripts/hyprlock/"
+
+# Update temp .conf with current wallpapaer path
+"$SCRIPT_DIR/update_conf.sh"
+
 # Set paths
 default_conf="$HOME/.config/hypr/hyprlock.conf"
 temp_conf="/tmp/hyprlock.conf"
