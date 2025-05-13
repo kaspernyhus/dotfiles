@@ -2,6 +2,8 @@ alias shutdown='systemctl poweroff'
 alias sudp='sudo'
 alias sudo='sudo '
 
+alias update=pary -Syu --skipreview
+
 alias cd=j
 alias cf=ji
 
