@@ -28,6 +28,9 @@ exec-once = pipewire -c filter-chain.conf
 # XDG setup
 exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
+# Randomize wallpaper
+exec-once = ~/.config/hypr/scripts/wallpaper/change_wallpaper.sh
+
 # Keybinds
 source = ~/.config/hypr/keybinds.conf
 
