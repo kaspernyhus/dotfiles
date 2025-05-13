@@ -69,8 +69,6 @@
       "space 8": ["pane::ActivateItem", 7],
       "space 9": ["pane::ActivateItem", 8],
       "space 0": "pane::ActivateLastItem",
-      // "Telescope" things.
-      "space space": "file_finder::Toggle"
     }
   },
 
