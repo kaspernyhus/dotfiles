@@ -1,6 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-SCRIPT_DIR="$HOME/.config/hypr/scripts/wallpaper/"
+WALLPAPER_DIR="/home/kaspernyhus/.config/wallpapers"
+CURRENT_WALL=$(hyprctl hyprpaper listloaded)
 
-"$SCRIPT_DIR/randomize_wallpaper.sh"
-"$SCRIPT_DIR/update_hyprlock.sh"
+# Get a random wallpaper that is not the current one
+WALLPAPER=$(find "$WALLPAPER_DIR" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
+
+# Apply the selected wallpaper
+hyprctl hyprpaper reload ,"$WALLPAPER"
+
