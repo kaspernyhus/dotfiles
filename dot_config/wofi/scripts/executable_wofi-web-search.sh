@@ -1,40 +1,35 @@
+
 #!/bin/bash
 
-# Pick your launcher
-MENU_CMD="wofi --dmenu -p 'Search where?'"
-# MENU_CMD="rofi -dmenu -p 'Search where?'"
+MENU_CMD="wofi --dmenu --show-icons -i -p 'Search where?'"
 
-# Options
-options=("Google" "Arch Wiki" "ChatGPT")
+options=$(cat <<EOF
+google-chrome Google
+archlinux Arch Wiki
+chatgpt ChatGPT
+EOF
+)
 
-# Show menu and get selection
-selection=$(printf "%s\n" "${options[@]}" | eval "$MENU_CMD")
-[ -z "$selection" ] && exit 0  # User cancelled
+selection=$(echo "$options" | $MENU_CMD | awk '{print $1}')
+[ -z "$selection" ] && exit 0
 
-# Prompt for search query
-query=$(echo "" | eval "$MENU_CMD" -p "Search for:")
-[ -z "$query" ] && exit 0  # User cancelled
+query=$(echo "" | wofi --dmenu -p "Search for:")
+[ -z "$query" ] && exit 0
 
-# URL encode query
 encoded_query=$(printf %s "$query" | jq -sRr @uri)
 
-# Construct URL
 case "$selection" in
-    "Google")
-        url="https://www.google.com/search?q=$encoded_query"
+    google)
+        url="https://www.google.dk/search?q=$encoded_query"
         ;;
-    "Arch Wiki")
+    arch)
         url="https://wiki.archlinux.org/index.php?search=$encoded_query"
         ;;
-    "ChatGPT")
+    chatgpt)
         url="https://chat.openai.com/?q=$encoded_query"
-        ;;
-    *)
-        exit 1
         ;;
 esac
 
-# Open in browser
-# Replace with your browser command if needed (e.g., firefox, brave)
-hyprctl dispatch exec "xdg-open '$url'"
+xdg-open "$url" &
+sleep 0.5
 hyprctl dispatch focuswindow "class:^(firefox)$"
