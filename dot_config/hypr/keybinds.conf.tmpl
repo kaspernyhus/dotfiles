@@ -17,6 +17,7 @@ bind = $mainMod, escape, exec, wlogout -c 1 -r 1 -p layer-shell
 bind = $mainMod, A, exec, google-chrome-stable https://chat.openai.com/?model=gpt-4 --new-window
 bind = $mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy
 bind = $mainMod, Y, exec, kitty yazi
+bind = $mainMod, P, exec, $HOME/.config/wofi/scripts/wofi-web-search.sh 
 
 # Groups
 bind = $mainMod, G, togglegroup
