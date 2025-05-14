@@ -1,11 +1,12 @@
 #!/bin/bash
 
-MENU_CMD="wofi --show dmenu --allow-images -i -p 'Search where?'"
+MENU_CMD="wofi --show dmenu --allow-images -i"
+ICONS_DIR="$HOME/.config/wofi/icons/"
 
 options=$(cat <<EOF
-img:/usr/share/icons/Papirus/48x48/apps/google-chrome.svg:text:Google
-img:/usr/share/icons/arch-linux.svg:text:Arch Wiki
-img:/usr/share/icons/chatgpt.png:text:ChatGPT
+img:$ICONS_DIR/google-chrome.svg:text:Google
+img:$ICONS_DIR/arch-linux.svg:text:Arch Wiki
+img:$ICONS_DIR/chatgpt.png:text:ChatGPT
 EOF
 )
 
