@@ -5,7 +5,6 @@ alias sudo='sudo '
 alias update='paru -Syu --skipreview'
 
 alias cd=j
-alias cf=ji
 
 alias ..='cd ..'
 alias ...='cd ../..'
