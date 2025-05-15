@@ -18,6 +18,7 @@ bind = $mainMod, A, exec, google-chrome-stable https://chat.openai.com/?model=gp
 bind = $mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy
 bind = $mainMod, Y, exec, kitty yazi
 bind = $mainMod, P, exec, $HOME/.config/wofi/scripts/wofi-web-search.sh 
+bind = $mainMod, L, exec, $HOME/.config/wofi/scripts/wofi-env-run.sh
 
 # Groups
 bind = $mainMod, G, togglegroup
@@ -35,16 +36,9 @@ bind = $mainMod, N, workspace, emptynm
 # Hyprsplit specific
 bind = $mainMod, R, split:grabroguewindows
 
-{{- if .worklaptop}}
-# Work laptop only
-bind = $mainMod, T, exec, google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland https://teams.microsoft.com/v2/ --new-window
-
-{{- else}}
-
 # Personal laptop only
 bind = $mainMod, M, exec, thunderbird
 bind = $mainMod, C, exec, gnome-calendar
-{{- end}}
 
 bind = ALT, TAB, workspace, previous
 
