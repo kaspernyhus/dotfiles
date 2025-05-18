@@ -53,11 +53,11 @@
     "bindings": {
 
       // Marks
-      "space o": "vim::ToggleMarksView",
-      "space a h": [ "workspace::SendKeystrokes", "m shift-a" ],
-      "space a j": [ "workspace::SendKeystrokes", "m shift-b" ],
-      "space a k": [ "workspace::SendKeystrokes", "m shift-c" ],
-      "space a l": [ "workspace::SendKeystrokes", "m shift-d" ],
+      "space m": "vim::ToggleMarksView",
+      "space m h": [ "workspace::SendKeystrokes", "m shift-a" ],
+      "space m j": [ "workspace::SendKeystrokes", "m shift-b" ],
+      "space m k": [ "workspace::SendKeystrokes", "m shift-c" ],
+      "space m l": [ "workspace::SendKeystrokes", "m shift-d" ],
       "space h": [ "workspace::SendKeystrokes", "` shift-a" ],
       "space j": [ "workspace::SendKeystrokes", "` shift-b" ],
       "space k": [ "workspace::SendKeystrokes", "` shift-c" ],
