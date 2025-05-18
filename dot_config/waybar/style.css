@@ -29,11 +29,11 @@ window#waybar {
     border-radius: 5px;
 }
 
-#clock, #battery, #network, #pulseaudio, #tray, #cpu, #memory, #bluetooth, #custom-spotify, #custom-wlogout, #window {
+#clock, #battery, #pulseaudio, #tray, #cpu, #memory, #bluetooth, #custom-spotify, #window, #network {
     padding: 2px 8px;
     margin: 5px 0 5px 5px;
 }
 
-#custom-wlogout {
-   margin-right: 16px;
+#network {
+   margin-right: 10px;
 }

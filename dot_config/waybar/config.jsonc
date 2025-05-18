@@ -20,11 +20,10 @@
     "pulseaudio",
     "pulseaudio#microphone",
     "battery",
+    "bluetooth",
     "network#wlan",
     "network#eth",
-    "network#usb",
-    "bluetooth",
-    "custom/wlogout"
+    "network#usb"
   ],
   "hyprland/window": {
     "format": "{class}",
@@ -75,8 +74,9 @@
     "spacing": 20
   },
   "clock": {
-    "format": "{:%a %e %b %R}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    "format": "{:L%a %e %b %R}",
+    "tooltip": false,
+    "on-click": "gnome-calendar"
   },
   "pulseaudio": {
     "format": "{icon}  {volume}%",
@@ -182,11 +182,5 @@
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous",
     "max-length": 50
-  },
-  "custom/wlogout": {
-    "format": "",
-    "tooltip": false,
-    "interval": "once",
-    "on-click": "wlogout -c 1 -r 1 -p layer-shell"
   }
 }
