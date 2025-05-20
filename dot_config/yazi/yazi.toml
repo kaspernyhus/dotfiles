@@ -2,7 +2,7 @@
 ratio = [1, 4, 3]
 sort_by = "natural"
 sort_dir_first = true
-show_hidden = false
+show_hidden = true
 
 [opener]
 edit = [{ run = 'nvim "$@"', block = true, desc = "neovim", for = "linux" }]
