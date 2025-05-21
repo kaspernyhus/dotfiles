@@ -33,12 +33,15 @@
   {
     "context": "vim_mode == visual",
     "bindings": {
+      "v": "editor::SelectLargerSyntaxNode",
+      "V": "editor::SelectSmallerSyntaxNode",
       "shift-s": ["vim::PushAddSurrounds", {}]
     }
   },
   {
     "context": "vim_mode == normal",
     "bindings": {
+      "space i h": "editor::ToggleInlayHints",
       "g b": "editor::ToggleGitBlameInline"
     }
   },
@@ -49,19 +52,27 @@
     }
   },
   {
+    "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
+    "bindings": {
+      // mini.ai plugin behavior
+      "q": "vim::MiniQuotes",
+      "b": "vim::MiniBrackets"
+    }
+  },
+  {
     "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
     "bindings": {
 
       // Marks
       "space m": "vim::ToggleMarksView",
-      "space m h": [ "workspace::SendKeystrokes", "m shift-a" ],
-      "space m j": [ "workspace::SendKeystrokes", "m shift-b" ],
-      "space m k": [ "workspace::SendKeystrokes", "m shift-c" ],
-      "space m l": [ "workspace::SendKeystrokes", "m shift-d" ],
-      "space h": [ "workspace::SendKeystrokes", "` shift-a" ],
-      "space j": [ "workspace::SendKeystrokes", "` shift-b" ],
-      "space k": [ "workspace::SendKeystrokes", "` shift-c" ],
-      "space l": [ "workspace::SendKeystrokes", "` shift-d" ],
+      "space m h": [ "workspace::SendKeystrokes", "m shift-b" ],
+      "space m j": [ "workspace::SendKeystrokes", "m shift-j" ],
+      "space m k": [ "workspace::SendKeystrokes", "m shift-k" ],
+      "space m l": [ "workspace::SendKeystrokes", "m shift-l" ],
+      "space h": [ "workspace::SendKeystrokes", "` shift-b" ],
+      "space j": [ "workspace::SendKeystrokes", "` shift-j" ],
+      "space k": [ "workspace::SendKeystrokes", "` shift-k" ],
+      "space l": [ "workspace::SendKeystrokes", "` shift-l" ],
 
       // Lazygit
       "space g": [
