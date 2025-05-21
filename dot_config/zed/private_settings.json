@@ -143,6 +143,9 @@
           }
         }
       ]
+    },
+    "Rust": {
+      "format_on_save": "on"
     }
   },
   "lsp": {
@@ -167,6 +170,10 @@
           "closureReturnTypeHints": {
             "enable": "always"
           }
+        },
+        "checkOnSave": true,
+        "check": {
+          "command": "clippy"
         }
       }
     }
